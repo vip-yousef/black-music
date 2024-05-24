@@ -331,7 +331,7 @@ async def games(c: Client, m: Message):
                 async for photo in c.iter_profile_photos(m.from_user.id, limit=1):
                     await m.reply_photo(photo.file_id,
                                         caption="↯︙نسبه جمالك هي ~⪼ " + random.choice(gmalnumbers) + "% ❤️🙄")
-        else:
+            else:
             await m.reply_text("↯︙صورتي معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
 
     if m.text == "كشف الكذب" or m.text == "كشف الكدب":
@@ -344,13 +344,13 @@ async def games(c: Client, m: Message):
     if m.text == "كره السله" or m.text == "كرة السله" or m.text == "كرة السلة":
             requests.get("https://api.telegram.org/bot" + TOKEN + "/sendDice?chat_id=" + str(m.chat.id) +
                          "&reply_to_message_id=" + str(m.message_id) + "&emoji=🏀")
-        else:
+    else:
             await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
 
     if m.text == "النشال" or m.text == "ألنشال":
             requests.get("https://api.telegram.org/bot" + TOKEN + "/sendDice?chat_id=" + str(m.chat.id) +
                          "&reply_to_message_id=" + str(m.message_id) + "&emoji=🎯")
-        else:
+    else:
             await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
 
     if m.text == "النرد" or m.text == "الزهر" or m.text == "ألنرد":
