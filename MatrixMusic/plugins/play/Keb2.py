@@ -32,7 +32,7 @@ async def aTari(client: Client, message: Message):
 
 
 
-@app.on_message(command(["‹ صور ›","صور"]) & filters.private)
+@app.on_message(command(["‹ صور ›","صور"]) & filters.group & filters.reply)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,50)
     url = f"https://t.me/vnnkli/{rl}"
