@@ -729,12 +729,6 @@ async def games(c: Client, m: Message):
             name = re.sub("الصوت", "اسير بلا رجلين ولا ادخل الا بالاذنين فمن انا ؟", name)
             name = re.sub("بلم", "حامل ومحمول نصف ناشف ونصف مبلول فمن اكون ؟ ", name)
             await m.reply_text(f"≭︰اسرع واحد يحل الفزوره ↬ {name}\n↯", reply_to_message_id=m.message_id)
-        for wtr in get_db_waitg(m.chat.id):
-            if wtr[1] == m.text:
-                set_db_mypointgame(1, m.from_user.id, m.chat.id)
-                await m.reply_text("≭︰الف مبروك لقد فزت وحصلت على نقطه\n≭︰للعب مره اخره ارسل ↬{ الفزوره }\n↯",
-                                   reply_to_message_id=m.message_id)
-                return
 
     if m.text == "تويت" or m.text == "كت تويت" or m.text == "تويته" or m.text == "كات تويت":
             tweet = [
