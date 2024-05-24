@@ -5,13 +5,9 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, Message, CallbackQuery
 from config import BOT_TOKEN
 from database import set_db_waitg, get_db_waitg, del_db_waitg, set_db_mypointgame
-from MatrixMusic.plugins.play.general import waitg_test
-from MatrixMusic.plugins.play.locks import lock_games_test, set_db_wait, lock_myphoto_test
-
 
 @Client.on_callback_query(filters.regex("^moderngame (\\d+)$"))
 async def moderngame(c: Client, m: CallbackQuery):
-    a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
         await c.answer_callback_query(m.id, text="الامر لايخصك انقلع", show_alert=True)
         return
@@ -40,7 +36,6 @@ async def moderngame(c: Client, m: CallbackQuery):
 
 @Client.on_callback_query(filters.regex("^sourcegame (\\d+)$"))
 async def sourcegame(c: Client, m: CallbackQuery):
-    a = m.data.split(" ")
     if m.from_user.id != int(a[1]):
         await c.answer_callback_query(m.id, text="الامر لايخصك انقلع", show_alert=True)
         return
@@ -116,7 +111,6 @@ async def games(c: Client, m: Message):
             await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
 
     if m.text == "صراحه" or m.text == "لعبه صراحه" or m.text == "لعبة صراحة" or m.text == "صراحة":
-        if not lock_games_test(m):
             saraha = [
                 "ماتركس جدع ولا مش جدع 👀👀",
                 "حبيت كام مره 💏",
@@ -198,10 +192,6 @@ async def games(c: Client, m: Message):
 
             ]
             await m.reply_text(random.choice(saraha), reply_to_message_id=m.message_id)
-            set_db_wait("saraha", m.from_user.id, m.chat.id)
-        else:
-            await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
-
     if m.text == "مريم" or m.text == "لعبه مريم" or m.text == "لعبة مريم" or m.text == "العاب مريم":
         if not lock_games_test(m):
             mariam = [
@@ -260,12 +250,7 @@ async def games(c: Client, m: Message):
 
             ]
             await m.reply_text(random.choice(mariam), reply_to_message_id=m.message_id)
-            set_db_wait("mariam", m.from_user.id, m.chat.id)
-        else:
-            await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
-
     if m.text == "عقاب" or m.text == "لعبه عقاب" or m.text == "لعبة عقاب" or m.text == "العاب عقاب":
-        if not lock_games_test(m):
             eqab = [
 
                 "↯︙صورة وجهك او رجلك او خشمك او يدك\n↯",
@@ -322,12 +307,8 @@ async def games(c: Client, m: Message):
 
             ]
             await m.reply_text(random.choice(eqab), reply_to_message_id=m.message_id)
-            set_db_wait("eqab", m.from_user.id, m.chat.id)
-        else:
-            await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
 
     if m.text == "نسبه جمالى" or m.text == "نسبة جمالي" or m.text == "جمالي":
-        if not lock_myphoto_test(m):
             if sudo2(m):
                 async for photo in c.iter_profile_photos(m.from_user.id, limit=1):
                     await m.reply_photo(photo.file_id,
@@ -357,19 +338,12 @@ async def games(c: Client, m: Message):
 
     if m.text == "كشف الكذب" or m.text == "كشف الكدب":
         if not lock_games_test(m):
-            await m.reply_text("ارسل لى الجمله لتعرف صدق ام كذب😳😂", reply_to_message_id=m.message_id)
-            set_db_wait("kshfelkzb", m.from_user.id, m.chat.id)
-        else:
-            await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
+            await m.reply_text("ارسل لى الجمله لتعرف صدق ام كذب", reply_to_message_id=m.message_id)
 
     if m.text == "نسبه الحب" or m.text == "نسبة الحب":
-        if not lock_games_test(m):
-            await m.reply_text("❤️💞حسنا ارسل اسمك واسم حبيبتك او العكس \n مثال: محمد وندا!!",
+            await m.reply_text("حسنا ارسل اسمك واسم حبيبتك او العكس \n مثال: محمد وندا!!",
                                reply_to_message_id=m.message_id)
-            set_db_wait("nsptelhob", m.from_user.id, m.chat.id)
-        else:
-            await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
-
+            
     if m.text == "كره السله" or m.text == "كرة السله" or m.text == "كرة السلة":
         if not lock_games_test(m):
             requests.get("https://api.telegram.org/bot" + TOKEN + "/sendDice?chat_id=" + str(m.chat.id) +
@@ -903,31 +877,13 @@ async def games(c: Client, m: Message):
             await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
 
 
-@Client.on_callback_query(filters.regex("^ttgwzeny$"))
-async def ttgwzeny(c: Client, m: CallbackQuery):
-    await message.reply_text(
-        f"""✨ **Welcome {message.from_user.mention()} !**\n
-💭 [{BOT_NAME}](https://t.me/{BOT_USERNAME}) **Allows you to play music and video on groups through the Telegram Group video chat!**
-💡 **Find out all the Bot's commands and how they work by clicking on the ↬ 📚 Commands button!**
-🔖 **To know how to use this bot, please click on the ↬ ❓ Basic Guide button!**
-"""
-)
-@Client.on_callback_query(filters.regex("^antgame$"))
-async def antgame(c: Client, m: CallbackQuery):
-    await c.answer_callback_query(m.id, text="ياكلب ياللي معندكش رحمه بتموتها لي..😒😢", show_alert=True)
-    await m.message.delete()
-    await m.message.reply_photo("https://t.me/guikohg/3",
-                                caption=f"هو الكلب ده اللي موتها يجماعه😂👇\n["
-                                        f"{m.from_user.first_name}](tg://user?id={m.from_user.id})",
-                                parse_mode="Markdown")
-
 
 @Client.on_callback_query(filters.regex("^cockroachgame$"))
 async def cockroachgame(c: Client, m: CallbackQuery):
-    await c.answer_callback_query(m.id, text="يخربييت ام دى عفانه..😒😢", show_alert=True)
+    await c.answer_callback_query(m.id, text="ياخرا", show_alert=True)
     await m.message.delete()
     await m.message.reply_animation("https://t.me/UURTBOT/45",
-                                    caption=f"هو المعفن اللى صحي الصرصار يجماعه😂👇\n["
+                                    caption=f"هو المعفن اللى صحي الصرصار يجماعه 😂👇\n["
                                             f"{m.from_user.first_name}](tg://user?id={m.from_user.id})",
                                     parse_mode="Markdown")
 
@@ -940,17 +896,3 @@ async def piggame(c: Client, m: CallbackQuery):
                                 caption=f"هو الخنزير اللى قتل اخوه يجماعه😂👇\n["
                                         f"{m.from_user.first_name}](tg://user?id={m.from_user.id})",
                                 parse_mode="Markdown")
-
-    if m.text == "تفعيل الالعاب":
-        await lock_games_open(m)
-    else:
-        await m.reply_text("↯︙تم تفعيل العاب بنجاح .",
-                           reply_to_message_id=m.message_id)
-        return
-
-    if m.text == "قفل الالعاب":
-          await lock_games_close(m)
-    else:
-        await m.reply_text("↯︙تم تعطيل الالعاب بنجاح .",
-                           reply_to_message_id=m.message_id)
-        return
