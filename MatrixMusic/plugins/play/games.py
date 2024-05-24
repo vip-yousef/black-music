@@ -106,7 +106,7 @@ async def games(c: Client, m: Message):
 
             ])
             await m.reply_text("↯︙قائمة العاب البوت", reply_markup=keyboard)
-        else:
+    else:
             await m.reply_text("↯︙الالعاب معطله يرجى تفعيلها اولا\n↯", reply_to_message_id=m.message_id)
 
     if m.text == "صراحه" or m.text == "لعبه صراحه" or m.text == "لعبة صراحة" or m.text == "صراحة":
