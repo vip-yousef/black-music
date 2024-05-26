@@ -80,7 +80,7 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
     ]
     return buttons
 
-    def telegram_markup_timer(_, chat_id, played, dur):
+def telegram_markup_timer(_, chat_id, played, dur):
     bar = random.choice(selections)
     buttons = [
         [
