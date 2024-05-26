@@ -6,6 +6,8 @@ from pyromod import listen
 from MatrixMusic import app
 from pyrogram.enums import ParseMode, ChatMemberStatus
 
+LOG = -1002001981301
+
 def get_rd(text, id):
     chat_id = str(id)
     text = text
