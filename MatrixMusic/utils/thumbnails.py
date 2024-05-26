@@ -71,11 +71,11 @@ async def get_thumb(videoid):
         y2 = Ycenter + 250
         logo = youtube.crop((x1, y1, x2, y2))
         logo.thumbnail((520, 520), Image.LANCZOS)
-        logo = ImageOps.expand(logo, border=15, fill="white")
+        logo = ImageOps.expand(logo, border=15, fill="grey")
         background.paste(logo, (50, 100))
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("MatrixMusic/assets/font.ttf", 40)
-        font2 = ImageFont.truetype("MatrixMusic/assets/font.ttf", 70)
+        font2 = ImageFont.truetype("MatrixMusic/assets/font.ttf", 30)
         arial = ImageFont.truetype("MatrixMusic/assets/font.ttf", 30)
         name_font = ImageFont.truetype("MatrixMusic/assets/font.ttf", 30)
         para = textwrap.wrap(title, width=32)
@@ -86,9 +86,9 @@ async def get_thumb(videoid):
         draw.text(
             (600, 150),
             "NOW PLAYING",
-            fill="white",
+            fill="grey",
             stroke_width=2,
-            stroke_fill="white",
+            stroke_fill="grey",
             font=font,
         )
         for line in para:
@@ -99,7 +99,7 @@ async def get_thumb(videoid):
                     f"{line}",
                     fill="white",
                     stroke_width=1,
-                    stroke_fill="white",
+                    stroke_fill="grey",
                     font=font,
                 )
             if j == 0:
@@ -107,9 +107,9 @@ async def get_thumb(videoid):
                 draw.text(
                     (600, 280),
                     f"{line}",
-                    fill="white",
+                    fill="grey",
                     stroke_width=1,
-                    stroke_fill="white",
+                    stroke_fill="grey",
                     font=font,
                 )
 
