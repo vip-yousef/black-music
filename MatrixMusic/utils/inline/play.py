@@ -94,7 +94,9 @@ def telegram_markup_timer(_, chat_id, played, dur):
     ]
     return buttons
 
-def stream_markup(_, chat_id):
+
+
+def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
@@ -106,12 +108,11 @@ def stream_markup(_, chat_id):
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
         ],
-    [
-        [InlineKeyboardButton(text=_["MATRIX_BUTTON"], url=f"https://t.me/vvizinn")],
-        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
-    ]
-    return buttons
-
+        [
+            InlineKeyboardButton(
+                text=_["CLOSE_BUTTON"], callback_data="close"
+            )
+            
 def stream_markup(_, videoid, chat_id):
     buttons = [
         [
