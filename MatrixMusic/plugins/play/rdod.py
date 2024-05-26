@@ -2,7 +2,6 @@ import os
 #os.system("pip install pyrogram && pip install tgcrypto && pip install pyromod && clear")
 
 from pyrogram import Client, filters, idle
-from pyromod import Zelzaly
 from MatrixMusic import app
 from pyrogram.enums import ParseMode, ChatMemberStatus
 
