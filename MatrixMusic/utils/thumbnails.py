@@ -85,7 +85,7 @@ async def get_thumb(videoid):
         )
         draw.text(
             (600, 150),
-            "𝗡𝗢𝗪 𝗣𝗟𝗔𝗬𝗜𝗡𝗚",
+            "NOW PLAYING",
             fill="white",
             stroke_width=2,
             stroke_fill="white",
@@ -131,6 +131,12 @@ async def get_thumb(videoid):
             (255, 255, 255),
             font=arial,
         )
+      draw.text(
+            (600, 550),
+            f"Channel Source : @vvizinn",
+            (255, 255, 255),
+            font=arial,
+      )
         try:
             os.remove(f"cache/thumb{videoid}.png")
         except:
