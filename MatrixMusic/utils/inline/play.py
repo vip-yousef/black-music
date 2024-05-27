@@ -299,3 +299,42 @@ def panel_markup_2(_, videoid, chat_id):
         ],
     ]
     return buttons
+
+def panel_markup_3(_, videoid, chat_id):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text="‹ ارجاع 10ث ›",
+                callback_data=f"ADMIN 1|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="‹ تقديم 10ث ›",
+                callback_data=f"ADMIN 2|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="‹ ارجاع 30ث ›",
+                callback_data=f"ADMIN 3|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="‹ تقديم 30ث ›",
+                callback_data=f"ADMIN 4|{chat_id}",
+            ),
+        ],
+        [
+            InlineKeyboardButton(
+                text="◀️",
+                callback_data=f"Pages Back|2|{videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="‹ رجوع ›",
+                callback_data=f"MainMarkup {videoid}|{chat_id}",
+            ),
+            InlineKeyboardButton(
+                text="▶️",
+                callback_data=f"Pages Forw|2|{videoid}|{chat_id}",
+            ),
+        ],
+    ]
+    return buttons
