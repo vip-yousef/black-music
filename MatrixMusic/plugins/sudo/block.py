@@ -6,7 +6,6 @@ from MatrixMusic import app
 from MatrixMusic.misc import SUDOERS
 from MatrixMusic.utils.database import add_gban_user, remove_gban_user
 from MatrixMusic.utils.decorators.language import language
-from MatrixMusic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
