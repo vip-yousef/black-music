@@ -1,8 +1,8 @@
-from dbh import dbcGeneral, dbGeneral
 import random
 from typing import Dict, List, Union
 from MatrixMusic import userbot
 from MatrixMusic.core.mongo import mongodb
+from dbh import dbcGeneral, dbGeneral
 
 authdb = mongodb.adminauth
 authuserdb = mongodb.authuser
