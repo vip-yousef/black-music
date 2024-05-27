@@ -266,8 +266,8 @@ async def stream(
                 user_id,
                 "video" if video else "audio",
             )
-          position = len(db.get(chat_id)) - 1
-          await app.send_message(
+            position = len(db.get(chat_id)) - 1
+            await app.send_message(
                 original_chat_id,
                 _["queue_4"].format(
                     position, title[:30], duration_min, user_name
