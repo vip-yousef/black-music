@@ -17,7 +17,6 @@ from MatrixMusic.utils.database import (
     remove_banned_user,
 )
 from MatrixMusic.utils.decorators.language import language
-from MatrixMusic.utils.extraction import extract_user
 from config import BANNED_USERS
 
 
