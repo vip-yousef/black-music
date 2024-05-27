@@ -9,11 +9,11 @@ def track_markup(_, videoid, user_id, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["P_B_1"],
+                text=_["• تشغيل صۅت •"],
                 callback_data=f"MusicStream {videoid}|{user_id}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
-                text=_["P_B_2"],
+                text=_["• تشغيل فيديۅ •"],
                 callback_data=f"MusicStream {videoid}|{user_id}|v|{channel}|{fplay}",
             ),
         ],
@@ -59,11 +59,11 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
         ],
         [
             InlineKeyboardButton(
-                text=_["PL_B_2"],
+                text=_["‹ قوائم التشغيل ›"],
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=_["PL_B_3"],
+                text=_["‹ قائمة التحكم ›"],
                 callback_data=f"PanelMarkup {videoid}|{chat_id}",
             ),
         ],
@@ -99,11 +99,11 @@ def stream_markup(_, videoid, chat_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["PL_B_2"],
+                text=_["‹ قوائم التشغيل ›"],
                 callback_data=f"add_playlist {videoid}",
             ),
             InlineKeyboardButton(
-                text=_["PL_B_3"],
+                text=_["‹ قائمة التحكم ›"],
                 callback_data=f"PanelMarkup None|{chat_id}",
             ),
         ],
@@ -121,11 +121,11 @@ def playlist_markup(_, videoid, user_id, ptype, channel, fplay):
     buttons = [
         [
             InlineKeyboardButton(
-                text=_["P_B_1"],
+                text=_["• تشغيل صۅت •"],
                 callback_data=f"Playlists {videoid}|{user_id}|{ptype}|a|{channel}|{fplay}",
             ),
             InlineKeyboardButton(
-                text=_["P_B_2"],
+                text=_["• تشغيل فيديۅ •"],
                 callback_data=f"Playlists {videoid}|{user_id}|{ptype}|v|{channel}|{fplay}",
             ),
         ],
