@@ -356,15 +356,13 @@ async def stream(
                 forceplay=forceplay,
             )
             img = await get_thumb(vidid)
-            button = stream_markup(_, chat_id)
+            button = telegram_markup(_, chat_id)
             run = await app.send_photo(
                 original_chat_id,
                 photo=img,
                 caption=_["stream_1"].format(
-                    f"https://t.me/{app.username}?start=info_{vidid}",
-                    title[:23],
-                    duration_min,
                     user_name,
+                    f"https://t.me/{app.username}?start=info_{vidid}",
                 ),
                 reply_markup=InlineKeyboardMarkup(button),
             )
