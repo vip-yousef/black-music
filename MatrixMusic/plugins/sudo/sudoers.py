@@ -6,7 +6,6 @@ from MatrixMusic import app
 from MatrixMusic.misc import SUDOERS
 from MatrixMusic.utils.database import add_sudo, remove_sudo
 from MatrixMusic.utils.decorators.language import language
-from MatrixMusic.utils.extraction import extract_user
 from MatrixMusic.utils.inline import close_markup
 from config import BANNED_USERS, OWNER_ID
 
