@@ -3,7 +3,7 @@ from pyrogram import filters
 from pyrogram.types import Message
 
 from MatrixMusic import app
-from MatrixMusic.utils import extract_user, int_to_alpha
+from MatrixMusic.utils import int_to_alpha
 from MatrixMusic.utils.database import (
     delete_authuser,
     get_authuser,
