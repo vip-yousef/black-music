@@ -28,15 +28,28 @@ def private_panel(_):
             ),
            InlineKeyboardButton(
             text=_["S_B_4"],
-            callback_data="zzzback")],
+            callback_data="zzzback"
+        )
+        ],
         [
-            InlineKeyboardButton(
+           InlineKeyboardButton(
                 text=_["ST_B_3"],
                 callback_data="LG"
             ),
+           InlineKeyboardButton(
+            text=_["• المطور •"],
+            url=f"https://t.me/A1RTR",
+        )
+        ],
+        [
+             InlineKeyboardButton(
+                text=_["• قناة التحديثات •"],
+                url=f"https://t.me/ExP_RsExS",
+            ),
             InlineKeyboardButton(
                 text=_["S_B_6"],
-                url="https://t.me/vvizinn"),
+                url="https://t.me/vvizinn"
+            ),
         ],
     ]
     return buttons
