@@ -63,7 +63,11 @@ admin_25 : "Döngü, {0} tarafından **{1}** kez etkinleştirildi. Bot şimdi se
 admin_26 : "Döngü oynatma için lütfen 1-10 arasındaki sayıları kullanın"
 admin_27 : "Döngü Oynatma devre dışı bırakıldı"
 
-# Bot 
+# Bot
+lang_1 : "≭︰Lütfen bu grup için varsayılan dil olarak ayarlamak istediğiniz dili seçin:"
+lang_2 : "≭︰Dil değiştirildi"
+lang_3 : "Dil değiştirilemedi ."
+lang_4: "Zaten aynı dildesiniz ."
 # Start
 start_1 : "Beni {0}'e davet ettiğiniz için teşekkürler.\n{1} çalışıyor.\n\nHerhangi bir yardım için destek grubumuza veya kanalımıza göz atın.."
 start_2 : "Merhaba, Benim adım {0}.\n\nBazı kullanışlı özelliklere sahip bir telegram müzik botuyum. Youtube, Spotify, Resso, AppleMusic , Soundcloud vb. Destekleyici platformlar\n\nBeni gruplarınıza eklemekten çekinmeyin."
