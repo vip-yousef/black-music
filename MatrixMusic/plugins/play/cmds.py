@@ -17,7 +17,7 @@ async def zdatsr(client: Client, message: Message):
     usrnam = usr.username
     await message.reply_photo(
         photo=f"https://telegra.ph/file/342bad57d5d870a4b5163.jpg",
-        caption=f"""<b>↯︙مرحباً بك عزيزي</b>\n<b>↯︙استخدم الازرار بالاسفل\n» ل تصفح اوامر الميوزك</b>""",
+        caption=f"""» مرحبـاً بك عـزيـزي\n» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
