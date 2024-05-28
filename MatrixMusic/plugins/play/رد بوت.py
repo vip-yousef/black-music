@@ -12,5 +12,5 @@ italy = ["ممكن تسميني باسمي!", "اسمي القميل ماترك�
 async def Italymusic(client, message):
     if "بوت" in message.text:
         response = random.choice(italy)
-        keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("قناة السورس", url="https://t.me/XMATTMX")]])
+        keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("قناة السورس", url="https://t.me/vvizinn")]])
         await message.reply(response, reply_markup=keyboard)
