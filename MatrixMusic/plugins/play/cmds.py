@@ -16,54 +16,26 @@ async def zdatsr(client: Client, message: Message):
     name = usr.first_name
     usrnam = usr.username
     await message.reply_photo(
-        photo=f"https://telegra.ph/file/342bad57d5d870a4b5163.jpg",
+        photo=f"https://telegra.ph/file/67207b5cae690538ac4e3.jpg",
         caption=f"""» مرحبـاً بك عـزيـزي\n» استخـدم الازرار بالاسفـل 𝄞\n» لـ تصفـح اوامـر الميـوزك 🥁</b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "‹ اوامر التشغيل ›", callback_data="zzzll"),
-                ],[
+                        "• اوامر التشغيل •", callback_data="zzzll"),
                     InlineKeyboardButton(
-                        "‹ اوامر القناة ›", callback_data="zzzch"),
-                    InlineKeyboardButton(
-                        "‹ اوامر الادمن ›", callback_data="zzzad"),
+                        "• اوامر القنوات •", callback_data="zzzch"),
                 ],[
+                    
                     InlineKeyboardButton(
-                        "‹ اوامر المطور ›", callback_data="zzzdv"),
-                ],[
-                    InlineKeyboardButton(name, url=f"https://t.me/{usrnam}"),
-                ],[
+                        "• اوامــر الادمــن •", callback_data="zzzad"),
+
                     InlineKeyboardButton(
-                        "‹ 𝖬𝖺𝖳𝗋𝗂x 𝖳𝖾𝖠𝗆 ›", url="https://t.me/XMATTMX"),
+                        "• اوامــر المطــور •", callback_data="zzzdv"),
+                ],[ 
+                    InlineKeyboardButton(
+                        "• سورس ريسكس •", url="https://t.me/vvizinn"),
                 ],
             ]
         ),
     )
-
-
-@app.on_message(command(["مطور", "المطور"]) & filters.group)
-async def zilzal(client: Client, message: Message):
-    usr = await client.get_users(OWNER_ID)
-    name = usr.first_name
-    usrnam = usr.username
-    async for photo in client.iter_profile_photos(OWNER_ID, limit=1):
-                    await message.reply_photo(photo.file_id,       caption=f"""ٴ<b>- - - - - - - - - - - - - - - - - -</b>
-                    
-- 𝚆𝙾𝙽𝙴𝚁 :{usr.first_name}
-- 𝚄𝚂𝙴𝚁 :@{usrnam} 
-- 𝙸𝙳 :{usr.id}
- </b>- - - - - - - - - - - - - - - - - -</b> """, 
-reply_markup=InlineKeyboardMarkup(
-          [               
-            [            
-              InlineKeyboardButton (name, url=f"https://t.me/{usrnam}"),
-            ],[
-              InlineKeyboardButton("‹ 𝖬𝖺𝖳𝗋𝗂x 𝖳𝖾𝖠𝗆 ›", url="https://t.me/XMATTMX"),
-            ],
-          ]
-       )                 
-    )                    
-                    sender_user = "@{senderuser}" if senderuser else "لا يوجـد"
-                    await app.send_message(OWNER_ID, f"- المستخـدم {message.from_user.mention} يناديـك \n\n- الاسـم : {sender_name} \n- الايـدي : {sender_id}\n- اليـوزر : {sender_user}")
-                    return await app.send_message(LOGGER_ID, f"- المستخـدم {message.from_user.mention} يناديـك \n\n- الاسـم : {sender_name} \n- الايـدي : {sender_id}\n- اليـوزر : {sender_user}")
