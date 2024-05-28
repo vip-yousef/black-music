@@ -31,13 +31,13 @@ def private_panel(_):
             callback_data="zzzback")],
         [
             InlineKeyboardButton(
-                text=_["S_B_6"],
-                url="https://t.me/vvizinn"),
+                text=_["ST_B_3"],
+                callback_data="LG"
         ],
         [
             InlineKeyboardButton(
-                text=_["CLOSE_BUTTON"], callback_data="close"
-            )
+                text=_["S_B_6"],
+                url="https://t.me/vvizinn"),
         ],
     ]
     return buttons
