@@ -37,13 +37,13 @@ def private_panel(_):
                 callback_data="LG"
             ),
            InlineKeyboardButton(
-            text=_["• المطور •"],
+            text=_["S_B_5"],
             url=f"https://t.me/A1RTR",
         )
         ],
         [
              InlineKeyboardButton(
-                text=_["• قناة التحديثات •"],
+                text=_["S_B_9"],
                 url=f"https://t.me/ExP_RsExS",
             ),
             InlineKeyboardButton(
