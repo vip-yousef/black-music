@@ -34,9 +34,6 @@ from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardBu
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.enums import ChatMemberStatus
 from MatrixMusic import app
-
-
-
 from pyrogram.types import (
     Message,
     InlineKeyboardMarkup as Markup,
@@ -64,6 +61,57 @@ def get_file_id(msg: Message):
                 setattr(obj, "message_type", message_type)
                 return obj
 
+import asyncio
+from strings.filters import command
+from MatrixMusic.utils.decorators import AdminActual
+from pyrogram.types import (
+    CallbackQuery,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    ReplyKeyboardMarkup,
+    ReplyKeyboardRemove,
+    InputMediaPhoto,
+    Message,
+)
+from MatrixMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from config import OWNER_ID
+
+
+@app.on_callback_query(filters.regex("devatari"))
+async def zzzback(_, query: CallbackQuery):
+
+    
+    usm = await client.get_users(OWNER_ID)
+    mname = usm.first_name
+    musrnam = usm.username
+    
+    chat = message.chat.id
+    gti = message.chat.title
+    chatusername = f"@{message.chat.username}"
+    link = await app.export_chat_invite_link(chat)
+    usr = await client.get_users(message.from_user.id)
+    user_id = message.from_user.id
+    user_ab = message.from_user.username
+    user_name = message.from_user.first_name
+    buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
+    reply_markup = InlineKeyboardMarkup(buttons)
+    
+    await app.send_message(OWNER_ID, f"<b>↯︙قام {message.from_user.mention}\n</b>"
+                                     f"<b>↯︙بمناداتك عزيزي المطور\n</b>"
+                                     f"<b>↯︙الأيدي {user_id}\n</b>"
+                                     f"<b>↯︙اليوزر @{user_ab}\n</b>"
+                                     f"<b>ايدي المجموعة {message.chat.id}\n</b>",
+                                     reply_markup=reply_markup)
+
+    # إنشاء زر "اونلاين"
+    online_button = InlineKeyboardButton(mname, url=f"https://t.me/{musrnam}")
+    
+    await message.reply_text(f"<b>↯︙تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @{musrnam} .</b>",
+                             disable_web_page_preview=True,
+                             reply_markup=InlineKeyboardMarkup([[online_button]]))
+
 @app.on_message(
     command(["المطور اتاري"])
     & filters.group
@@ -78,31 +126,13 @@ async def yas(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        name, url=f"https://t.me/{usr.username}")
+                        name, url=f"https://t.me/{usr.username}"),
+                  ],[
+                    
                 ],
             ]
         ),
-    )
-    
-@app.on_message(
-    command(["المطور بلال"])
-    & filters.group
-  
-)
-async def yas(client, message):
-    usr = await client.get_chat("NUNUU")
-    name = usr.first_name
-    photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        name, url=f"https://t.me/{usr.username}")
-                ],
-            ]
-        ),
-    )
+     )
     
 @app.on_message(command(["مطورين","مطورين السورس","المطورين"]))
 async def huhh(client: Client, message: Message):
@@ -127,22 +157,3 @@ async def huhh(client: Client, message: Message):
         ),
 
     )
-
-@app.on_chat_member_updated(filters=lambda _, response: response.new_chat_member)
-async def WelcomeDev(_, response: ChatMemberUpdated):
-    dev_id = 6855645033 #aHmEd
-    if response.from_user.id == dev_id and response.new_chat_member.status == ChatMemberStatus.MEMBER:
-        info = await app.get_chat(dev_id)
-        name = info.first_name
-        username = info.username
-        bio = info.bio
-        markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton(name, url=f"{username}.t.me")]
-        ])
-        await app.download_media(info.photo.big_file_id, file_name=os.path.join("downloads", "developer.jpg"))
-        await app.send_photo(
-            chat_id=response.chat.id,
-            reply_markup=markup,
-            photo="MatrixMusic/downloads/IMG_20240429_132344_166.jpg", 
-            caption=f"- تَمِ دَخِۅٛݪ مِطَۅٛࢪيَ اެتَاެࢪيَ اެݪمِجَمِۅٛعَة .\n- {name}\n- {bio}"
-        )
