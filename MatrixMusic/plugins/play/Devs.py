@@ -80,7 +80,7 @@ from config import OWNER_ID
 
 
 @app.on_callback_query(filters.regex("devatari"))
-async def zzzback(_, query: CallbackQuery):
+async def devatari(_, query: CallbackQuery):
 
     
     usm = await client.get_users(OWNER_ID)
@@ -98,22 +98,22 @@ async def zzzback(_, query: CallbackQuery):
     buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await app.send_message(OWNER_ID, f"<b>↯︙قام {message.from_user.mention}\n</b>"
-                                     f"<b>↯︙بمناداتك عزيزي المطور\n</b>"
-                                     f"<b>↯︙الأيدي {user_id}\n</b>"
-                                     f"<b>↯︙اليوزر @{user_ab}\n</b>"
-                                     f"<b>ايدي المجموعة {message.chat.id}\n</b>",
+    await app.send_message(OWNER_ID, f"<b>≭︰قام {message.from_user.mention}\n</b>"
+                                     f"<b>≭︰بمناداتك عزيزي المطور\n</b>"
+                                     f"<b>≭︰الأيدي {user_id}\n</b>"
+                                     f"<b>≭︰اليوزر @{user_ab}\n</b>"
+                                     f"<b>≭︰ايدي المجموعة {message.chat.id}\n</b>",
                                      reply_markup=reply_markup)
 
     # إنشاء زر "اونلاين"
     online_button = InlineKeyboardButton(mname, url=f"https://t.me/{musrnam}")
     
-    await message.reply_text(f"<b>↯︙تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @{musrnam} .</b>",
+    await message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @{musrnam} .</b>",
                              disable_web_page_preview=True,
                              reply_markup=InlineKeyboardMarkup([[online_button]]))
 
 @app.on_message(
-    command(["المطور اتاري"])
+    command(["المطور"])
     & filters.group
   
 )
@@ -128,6 +128,8 @@ async def yas(client, message):
                     InlineKeyboardButton(
                         name, url=f"https://t.me/{usr.username}"),
                   ],[
+                    InlineKeyboardButton(
+                        "• نداء المطور •", callback_data="devatari"),
                     
                 ],
             ]
