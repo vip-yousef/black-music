@@ -7,21 +7,21 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from MatrixMusic import app
 
-@app.on_chat_member_updated(filters=lambda _, response: response.new_chat_member)
+@app.on_chat_member_updated(filters=lambda _, response: response.new_chat_member, group=847)
 async def WelcomeDev(_, response: ChatMemberUpdated):
-    dev_id = 1488114134 #aHmEd
+    dev_id = 6855645033 #aHmEd
     if response.from_user.id == dev_id and response.new_chat_member.status == ChatMemberStatus.MEMBER:
         info = await app.get_chat(dev_id)
         name = info.first_name
         username = info.username
         bio = info.bio
         markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton(name, url=f"{username}.t.me")]
+            [InlineKeyboardButton(name, user_id=dev_id)]
         ])
         await app.download_media(info.photo.big_file_id, file_name=os.path.join("downloads", "bilal.jpg"))
         await app.send_photo(
             chat_id=response.chat.id,
             reply_markup=markup,
             photo="MatrixMusic/downloads/bilal.jpg", 
-            caption=f"- تَمِ دَخِۅٛݪ مِطَۅٛࢪيَ بَݪاެݪ اެݪمِجَمِۅٛعَة .\n- {name}\n- {bio}"
+            caption=f"- تَمِ دَخِۅٛݪ مِطَۅٛࢪيَ اެتَاެࢪيَ اެݪمِجَمِۅٛعَة .\n- {name}\n- {bio}"
         )
