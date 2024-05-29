@@ -5,40 +5,20 @@ import requests
 from pyrogram import filters
 import random
 from pyrogram import Client
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
-from strings.filters import command
-from MatrixMusic import app
-from random import  choice, randint
-import os, webbrowser
-import asyncio
-import requests
-from pyrogram import Client
-import aiohttp
-import aiofiles
-from pyrogram import enums
-from pyrogram.enums import ChatMembersFilter, ChatMemberStatus , ChatType
-from pyrogram.types import ChatPermissions, ChatPrivileges
-import yt_dlp
-from yt_dlp import YoutubeDL
-from pyrogram import Client, filters
-from pyrogram.errors import FloodWait
-from pyrogram.types import Message, InputTextMessageContent
-from youtube_search import YoutubeSearch
-from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.enums import ChatMemberStatus
-from pyrogram import Client, filters
-from pyrogram.types import Message
-from pyrogram.types import CallbackQuery, InputMediaPhoto, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.types import CallbackQuery, InputMediaPhoto, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.types import CallbackQuery, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.enums import ChatMemberStatus
-from MatrixMusic import app
+from MatrixMusic.utils.decorators import AdminActual
 from pyrogram.types import (
+    CallbackQuery,
+    InlineKeyboardButton,
+    InlineKeyboardMarkup,
+    ReplyKeyboardMarkup,
+    ReplyKeyboardRemove,
+    InputMediaPhoto,
     Message,
-    InlineKeyboardMarkup as Markup,
-    InlineKeyboardButton as Button
 )
+from strings.filters import command
+from random import  choice, randint
+from MatrixMusic import app
+from config import OWNER_ID
 
 def get_file_id(msg: Message):
     if msg.media:
@@ -50,6 +30,7 @@ def get_file_id(msg: Message):
             "video",
             "video_note",
             "voice",
+            # "contact",
             # "dice",
             # "poll",
             # "location",
@@ -60,23 +41,6 @@ def get_file_id(msg: Message):
             if obj:
                 setattr(obj, "message_type", message_type)
                 return obj
-
-import asyncio
-from strings.filters import command
-from MatrixMusic.utils.decorators import AdminActual
-from pyrogram.types import (
-    CallbackQuery,
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-    ReplyKeyboardMarkup,
-    ReplyKeyboardRemove,
-    InputMediaPhoto,
-    Message,
-)
-from MatrixMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from config import OWNER_ID
 
 
 @app.on_callback_query(filters.regex("devatari"))
