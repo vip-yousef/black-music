@@ -93,7 +93,7 @@ async def yas(client, message):
                         name, url=f"https://t.me/{usr.username}"),
                   ],[
                     InlineKeyboardButton(
-                        "• نداء المطور •", callback_data="devatari"),
+                        "• استدعاء المطور •", callback_data="devatari"),
                     
                 ],
             ]
