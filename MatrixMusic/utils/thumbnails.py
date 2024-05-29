@@ -75,9 +75,9 @@ async def get_thumb(videoid):
         background.paste(logo, (50, 100))
         draw = ImageDraw.Draw(background)
         font = ImageFont.truetype("MatrixMusic/assets/font.ttf", 40)
-        font2 = ImageFont.truetype("MatrixMusic/assets/font.ttf", 30)
-        arial = ImageFont.truetype("MatrixMusic/assets/font.ttf", 30)
-        name_font = ImageFont.truetype("MatrixMusic/assets/font.ttf", 30)
+        font2 = ImageFont.truetype("MatrixMusic/assets/font2.ttf", 50)
+        arial = ImageFont.truetype("MatrixMusic/assets/font2.ttf", 30)
+        name_font = ImageFont.truetype("MatrixMusic/assets/font2.ttf", 30)
         para = textwrap.wrap(title, width=32)
         j = 0
         draw.text(
@@ -131,12 +131,6 @@ async def get_thumb(videoid):
             (255, 255, 255),
             font=arial,
         )
-        draw.text(
-            (600, 550),
-            f"Channel Source : @vvizinn",
-            (255, 255, 255),
-            font=arial,
-      )
         try:
             os.remove(f"cache/thumb{videoid}.png")
         except:
