@@ -81,11 +81,11 @@ async def devatari(_, query: CallbackQuery):
     & filters.group
   
 )
-async def yas(client, message):
+async def rsexs(client, message):
     usr = await client.get_chat("A1RTR")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"– – – – – – – – – – – – – – – – – –\n↯︙𝖣𝖾𝗏 ↬ ⦗ {name} ⦘\n↯︙𝖴𝗌𝖤𝗋 ↬ ⦗ @{usr.username} ⦘\n↯︙𝖨𝖣 ↬ ⦗ {usr.id} ⦘\n↯︙𝖡𝗂𝖮 ↬ ⦗ {usr.bio} ⦘\n– – – – – – – – – – – – – – – – – –",  
+    await message.reply_photo(photo,       caption=f"≭︰Dev Name ↬ ⦗ {name} ⦘\n≭︰Dev User ↬ ⦗ @{usr.username} ⦘\n≭︰Dev id ↬ ⦗ {usr.id} ⦘",  
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -98,28 +98,4 @@ async def yas(client, message):
                 ],
             ]
         ),
-     )
-    
-@app.on_message(command(["مطورين","مطورين السورس","المطورين"]))
-async def huhh(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/f98c8fd479b206648d6c8.jpg",
-        caption=f"""↯︙اهلا بك عزيزي {message.from_user.mention}\n↯︙مطورين سورس ماتركس ميوزك""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "‹ : 𝖣𝖾𝗏 : ›", url=f"https://t.me/A1RTR"), 
-                 ],[
-                    InlineKeyboardButton(
-                        "‹ : 𝖣𝖾𝗏 : ›", url=f"https://t.me/NUNUU"),
-                ],[
-                    InlineKeyboardButton(
-                        "‹ : 𝖬𝖺𝖳𝗋𝗂x 𝖳𝖾𝖠𝗆 : ›", url=f"https://t.me/KKKK5Z"),
-                ],
-
-            ]
-
-        ),
-
     )
