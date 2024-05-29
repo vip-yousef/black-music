@@ -26,7 +26,7 @@ def testspeed(m, _):
     return result
 
 
-@app.on_message(command(["السرعة", "السرعه"]) & SUDOERS)
+@app.on_message(command(["البنك", "السرعة", "السرعه" ,"/ping"]) & SUDOERS)
 @language
 async def speedtest_function(client, message: Message, _):
     m = await message.reply_text(_["server_11"])
