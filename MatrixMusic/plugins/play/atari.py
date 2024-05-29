@@ -18,10 +18,10 @@ async def WelcomeDev(_, response: ChatMemberUpdated):
         markup = InlineKeyboardMarkup([
             [InlineKeyboardButton(name, user_id=dev_id)]
         ])
-        await app.download_media(info.photo.big_file_id, file_name=os.path.join("downloads", "bilal.jpg"))
+        await app.download_media(info.photo.big_file_id, file_name=os.path.join("downloads", "IMG_20240529_031114_928.jpg"))
         await app.send_photo(
             chat_id=response.chat.id,
             reply_markup=markup,
-            photo="MatrixMusic/downloads/bilal.jpg", 
+            photo="MatrixMusic/downloads/IMG_20240529_031114_928.jpg", 
             caption=f"- تَمِ دَخِۅٛݪ مِطَۅٛࢪيَ اެتَاެࢪيَ اެݪمِجَمِۅٛعَة .\n- {name}\n- {bio}"
         )
