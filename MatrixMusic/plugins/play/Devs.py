@@ -47,7 +47,7 @@ def get_file_id(msg: Message):
 async def devatari(_, query: CallbackQuery):
 
     
-    usm = await Client.get_user(OWNER_ID)
+    usm = await Client.get_users(OWNER_ID)
     mname = usm.first_name
     musrnam = usm.username
     
@@ -57,6 +57,7 @@ async def devatari(_, query: CallbackQuery):
     link = await app.export_chat_invite_link(chat)
     usr = await client.get_user(message.from_user.id)
     user_id = message.from_user.id
+    user_ids = message.from_user.id
     user_ab = message.from_user.username
     user_name = message.from_user.first_name
     buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
@@ -68,13 +69,8 @@ async def devatari(_, query: CallbackQuery):
                                      f"<b>≭︰اليوزر @{user_ab}\n</b>"
                                      f"<b>≭︰ايدي المجموعة {message.chat.id}\n</b>",
                                      reply_markup=reply_markup)
-
-    # إنشاء زر "اونلاين"
-    online_button = InlineKeyboardButton(mname, url=f"https://t.me/{musrnam}")
     
     await message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @{musrnam} .</b>",
-                             disable_web_page_preview=True,
-                             reply_markup=InlineKeyboardMarkup([[online_button]]))
 
 @app.on_message(
     command(["المطور"])
