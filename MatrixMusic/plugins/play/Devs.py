@@ -47,7 +47,7 @@ def get_file_id(msg: Message):
 async def devatari(_, query: CallbackQuery):
 
     
-    usm = await Client.user_ids(OWNER_ID)
+    usm = await Client.get_users(OWNER_ID)
     mname = usm.first_name
     musrnam = usm.username
     
@@ -55,7 +55,7 @@ async def devatari(_, query: CallbackQuery):
     gti = message.chat.title
     chatusername = f"@{message.chat.username}"
     link = await app.export_chat_invite_link(chat)
-    usr = await client.user_ids(message.from_user.id)
+    usr = await client.get_users(message.from_user.id)
     user_id = message.from_user.id
     user_ids = message.from_user.id
     user_ab = message.from_user.username
