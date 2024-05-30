@@ -47,7 +47,7 @@ def get_file_id(msg: Message):
 async def devatari(_, query: CallbackQuery):
 
     
-    usm = await Client.get_users(OWNER_ID)
+    usm = await Client.user_ids(OWNER_ID)
     mname = usm.first_name
     musrnam = usm.username
     
@@ -55,20 +55,17 @@ async def devatari(_, query: CallbackQuery):
     gti = message.chat.title
     chatusername = f"@{message.chat.username}"
     link = await app.export_chat_invite_link(chat)
-    usr = await client.get_user(message.from_user.id)
+    usr = await client.user_ids(message.from_user.id)
     user_id = message.from_user.id
     user_ids = message.from_user.id
     user_ab = message.from_user.username
     user_name = message.from_user.first_name
-    buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
-    reply_markup = InlineKeyboardMarkup(buttons)
     
     await app.send_message(OWNER_ID, f"<b>≭︰قام {message.from_user.mention}\n</b>"
                                      f"<b>≭︰بمناداتك عزيزي المطور\n</b>"
                                      f"<b>≭︰الأيدي {user_id}\n</b>"
                                      f"<b>≭︰اليوزر @{user_ab}\n</b>"
-                                     f"<b>≭︰ايدي المجموعة {message.chat.id}\n</b>",
-                                     reply_markup=reply_markup)
+                                     f"<b>≭︰ايدي المجموعة {message.chat.id}\n</b>")
     
     await message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @{musrnam} .</b>")
 
