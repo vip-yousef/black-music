@@ -51,9 +51,9 @@ async def devatari(_, query: CallbackQuery):
     mname = usm.first_name
     musrnam = usm.username
     
-    chat = message.chat.id
-    gti = message.chat.title
-    chatusername = f"@{message.chat.username}"
+    chat = query.message.chat.id
+    gti = query.message.chat.title
+    chatusername = f"@{query.message.chat.username}"
     link = await app.export_chat_invite_link(chat)
     usr = await client.get_users(message.from_user.id)
     user_id = message.from_user.id
@@ -75,7 +75,7 @@ async def devatari(_, query: CallbackQuery):
   
 )
 async def rsexs(client, message):
-    usr = await client.get_chat("A1RTR")
+    usr = await app.get_chat("A1RTR")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
     await message.reply_photo(photo,       caption=f"≭︰Dev Name ↬ ⦗ {name} ⦘\n≭︰Dev User ↬ ⦗ @{usr.username} ⦘\n≭︰Dev id ↬ ⦗ {usr.id} ⦘",  
