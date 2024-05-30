@@ -21,14 +21,14 @@ async def get_group_status(_, message: Message):
     premium_acc = banned = deleted_acc = bot = 0  # You should replace these variables with actual counts.
 
     response_text = (
-        f"↢ معلومات المجموعة : \n"
-        f"➲ اسم المجموعة : {group.title} \n"
-        f"➲ معرف مجموعة : {group.id}\n"
-        f"➲ إجمالي الأعضاء : {total_members}\n"
-        f"➲ البايو : {group_description or 'N/A'}\n"
-        f"➲ اليوزر : @{group_username}\n"
+        f"- معلومات المجموعة : \n"
+        f"• اسم المجموعة : {group.title} \n"
+        f"• معرف مجموعة : {group.id}\n"
+        f"• إجمالي الأعضاء : {total_members}\n"
+        f"• البايو : {group_description or 'N/A'}\n"
+        f"• اليوزر : @{group_username}\n"
        
-        f"MaTrix TeAm ."
+        f"- BlacK TeAm ."
     )
     
     await message.reply(response_text)
