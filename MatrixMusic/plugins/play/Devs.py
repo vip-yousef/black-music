@@ -48,8 +48,6 @@ async def devatari(_, query: CallbackQuery):
 
     
     usm = await app.get_users(user_ids=[OWNER_ID])
-    mname = usm.first_name
-    musrnam = usm.username
     
     chat = query.message.chat.id
     gti = query.message.chat.title
