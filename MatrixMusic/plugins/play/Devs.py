@@ -76,7 +76,7 @@ async def rsexs(client, message):
     usr = await app.get_chat("A1RTR")
     name = usr.first_name
     photo = await app.download_media(usr.photo.big_file_id)
-    await message.reply_photo(photo,       caption=f"≭︰Dev Name ↬ ⦗ {name} ⦘\n≭︰Dev User ↬ ⦗ @{usr.username} ⦘\n≭︰Dev id ↬ ⦗ {usr.id} ⦘",  
+    await message.reply_photo(photo,       caption=f"≭︰Dev Name ↬ ( {name} )\n≭︰Dev User ↬ ( @{usr.username} )\n≭︰Dev id ↬ ( {usr.id} )",  
     reply_markup=InlineKeyboardMarkup(
             [
                 [
