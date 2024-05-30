@@ -10,32 +10,27 @@ from strings import get_string, languages_present
 
 def lanuages_keyboard(_):
     keyboard = InlineKeyboard(row_width=2)
-    keyboard.row(
-        InlineKeyboardButton(
-            text="Arabic",
-            callback_data=f"languages:en",
-        ),
-        InlineKeyboardButton(
-            text="English",
-            callback_data=f"languages:ar",
-        ),
-    )
-    keyboard.row(
-        InlineKeyboardButton(
-            text="Turkish",
-            callback_data=f"languages:tr",
-        ),
-    )
-    keyboard.row(
-        InlineKeyboardButton(
-            text=_["BACK_BUTTON"],
-            callback_data=f"settingsback_helper",
-        ),
-        InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close"),
-    )
-    return keyboard
+    keyboard.add(
+        *[
+            (
+                InlineKeyboardButton(
+                    text=languages_present[i],
+                    callback_data=f"languages:{i}",
+                )
+            )
+            for i in languages_present
+        ]
 
 
+@app.on_message(filters.command(["lang", "setlang", "language"]) & ~BANNED_USERS)
+@language
+async def langs_command(client, message: Message, _):
+    keyboard = lanuages_keyboard(_)
+    await message.reply_text(
+        _["lang_1"],
+        reply_markup=keyboard,
+    )
+        
 @app.on_callback_query(filters.regex("LG") & ~BANNED_USERS)
 @languageCB
 async def lanuagecb(client, CallbackQuery, _):
