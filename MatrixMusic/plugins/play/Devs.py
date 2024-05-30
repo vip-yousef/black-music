@@ -70,7 +70,7 @@ async def devatari(_, query: CallbackQuery):
                                      f"<b>≭︰ايدي المجموعة {message.chat.id}\n</b>",
                                      reply_markup=reply_markup)
     
-    await message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @{musrnam} .</b>",
+    await message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @{musrnam} .</b>")
 
 @app.on_message(
     command(["المطور"])
