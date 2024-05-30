@@ -53,7 +53,7 @@ async def devatari(_, query: CallbackQuery):
     gti = query.message.chat.title
     chatusername = f"@{query.message.chat.username}"
     link = await app.export_chat_invite_link(chat)
-    usr = await client.get_users(message.from_user.id)
+    usr = await Client.get_users(message.from_user.id)
     user_id = message.from_user.id
     user_ids = message.from_user.id
     user_ab = message.from_user.username
