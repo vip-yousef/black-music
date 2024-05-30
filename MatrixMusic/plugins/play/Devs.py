@@ -47,7 +47,7 @@ def get_file_id(msg: Message):
 async def devatari(_, query: CallbackQuery):
 
     
-    usm = await Client.get_users(OWNER_ID)
+    usm = await Client.get_user(OWNER_ID)
     mname = usm.first_name
     musrnam = usm.username
     
