@@ -16,7 +16,7 @@ except ImportError:
 
 
 
-api = 'https://us-central1-chat-for-chatgpt.cloudfunctions.net/basicUserRequestBeta'
+api = 'https://gen-image-db1e89b9ccd1.herokuapp.com/generate?text=lion&amount=2'
 
 def gpt(query):
     headers = {
