@@ -54,10 +54,10 @@ async def devatari(_, query: CallbackQuery):
     chatusername = f"@{query.message.chat.username}"
     link = await app.export_chat_invite_link(chat)
     usr = await Client.get_users(query.from_user.id)
-    user_id = query.from_user.id
-    user_ids = query.from_user.id
-    user_ab = query.from_user.username
-    user_name = query.from_user.first_name
+    user_id = message.from_user.id
+    user_ids = message.from_user.id
+    user_ab = message.from_user.username
+    user_name = message.from_user.first_name
     
     await app.send_message(OWNER_ID, f"<b>≭︰قام {message.from_user.mention}\n</b>"
                                      f"<b>≭︰بمناداتك عزيزي المطور\n</b>"
