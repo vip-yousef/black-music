@@ -67,11 +67,11 @@ async def devatari(_, query: CallbackQuery):
                                      f"<b>≭︰بمناداتك عزيزي المطور\n</b>"
                                      f"<b>≭︰الأيدي {user_id}\n</b>"
                                      f"<b>≭︰اليوزر @{user_ab}\n</b>"
+                                     f"<b>≭︰يوزر القروب @{chatusername}\n</b>"
                                      f"<b>≭︰ايدي المجموعة {chat}\n</b>")
+                                     reply_markup=reply_markup
 
 
-    online_button = InlineKeyboardButton(usm.first_name, url=f"https://t.me/{usm.username}")
-    online_button = InlineKeyboardButton(mname, url=f"https://t.me/{musrnam}")
     await query.message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @A1RTR .</b>")
 
 @app.on_message(
