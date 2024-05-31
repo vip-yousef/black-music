@@ -46,7 +46,7 @@ def get_file_id(msg: Message):
 
 
 @app.on_callback_query(filters.regex("devatari"))
-async def devatari(_, query: CallbackQuery, client: Client, message: Message):
+async def devatari(_, query: CallbackQuery):
 
     
     usm = await app.get_users(user_ids=[OWNER_ID])
