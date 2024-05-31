@@ -72,7 +72,7 @@ async def devatari(_, query: CallbackQuery):
 
     online_button = InlineKeyboardButton(usm.first_name, url=f"https://t.me/{usm.username}")
     online_button = InlineKeyboardButton(mname, url=f"https://t.me/{musrnam}")
-     await query.message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @A1RTR .</b>")
+    await query.message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @A1RTR .</b>")
 
 @app.on_message(
     command(["المطور"])
