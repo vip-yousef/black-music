@@ -52,20 +52,17 @@ async def devatari(_, query: CallbackQuery):
     chat = query.message.chat.id
     gti = query.message.chat.title
     chatusername = f"@{query.message.chat.username}"
-    link = await app.export_chat_invite_link(chat)
-    usr = await Client.get_users(query.from_user.id)
-    user_id = message.from_user.id
-    user_ids = message.from_user.id
-    user_ab = message.from_user.username
-    user_name = message.from_user.first_name
+    user_id = query.from_user.id
+    user_ab = query.from_user.username
+    user_name = query.from_user.first_name
     
-    await app.send_message(OWNER_ID, f"<b>≭︰قام {message.from_user.mention}\n</b>"
+    await app.send_message(OWNER_ID, f"<b>≭︰قام {query.from_user.mention}\n</b>"
                                      f"<b>≭︰بمناداتك عزيزي المطور\n</b>"
                                      f"<b>≭︰الأيدي {user_id}\n</b>"
                                      f"<b>≭︰اليوزر @{user_ab}\n</b>"
-                                     f"<b>≭︰ايدي المجموعة {message.chat.id}\n</b>")
+                                     f"<b>≭︰ايدي المجموعة {chat}\n</b>")
     
-    await message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @{musrnam} .</b>")
+    await message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @{usm.mention} .</b>")
 
 @app.on_message(
     command(["المطور"])
