@@ -16,8 +16,10 @@ from pyrogram.types import (
     Message,
 )
 from strings.filters import command
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from random import  choice, randint
 from MatrixMusic import app
+from pyrogram import Client, filters
 from config import OWNER_ID
 
 def get_file_id(msg: Message):
@@ -44,7 +46,7 @@ def get_file_id(msg: Message):
 
 
 @app.on_callback_query(filters.regex("devatari"))
-async def devatari(_, query: CallbackQuery):
+async def devatari(_, query: CallbackQuery, client: Client, message: Message):
 
     
     usm = await app.get_users(user_ids=[OWNER_ID])
