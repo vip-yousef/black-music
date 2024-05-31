@@ -53,7 +53,7 @@ SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
 
 
-CHANNEL_NAME = getenv("CHANNEL_NAME", "ᯓ𓆩𖡡𓏺.𝐓𝐞𝐚𝐦-𝐑𝐬𝐄𝐱𝐒.𓏺𖡡𓆪ᯓ")
+CHANNEL_NAME = getenv("CHANNEL_NAME", "• 𝐁𝐥𝐚𝐜𝐤 𝐓𝐞𝐀𝐦 •")
 CHANNEL_LINK = getenv("CHANNEL_LINK", "vvizinn")
 SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/vvizinn")
 
