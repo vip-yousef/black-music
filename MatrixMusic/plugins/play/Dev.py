@@ -68,8 +68,7 @@ async def devatari(_, query: CallbackQuery):
                                      f"<b>≭︰الأيدي {user_id}\n</b>"
                                      f"<b>≭︰اليوزر @{user_ab}\n</b>"
                                      f"<b>≭︰يوزر القروب @{chatusername}\n</b>"
-                                     f"<b>≭︰ايدي المجموعة {chat}\n</b>",
-                                     reply_markup=reply_markup)
+                                     f"<b>≭︰ايدي المجموعة {chat}\n</b>")
 
 
     await query.message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @A1RTR .</b>")
