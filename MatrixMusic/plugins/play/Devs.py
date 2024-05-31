@@ -48,6 +48,8 @@ async def devatari(_, query: CallbackQuery):
 
     
     usm = await app.get_users(user_ids=[OWNER_ID])
+    mname = usm.first_name
+    musrnam = usm.username
     
     chat = query.message.chat.id
     gti = query.message.chat.title
@@ -55,14 +57,20 @@ async def devatari(_, query: CallbackQuery):
     user_id = query.from_user.id
     user_ab = query.from_user.username
     user_name = query.from_user.first_name
+    buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
+    reply_markup = InlineKeyboardMarkup(buttons)
     
     await app.send_message(OWNER_ID, f"<b>≭︰قام {query.from_user.mention}\n</b>"
                                      f"<b>≭︰بمناداتك عزيزي المطور\n</b>"
                                      f"<b>≭︰الأيدي {user_id}\n</b>"
                                      f"<b>≭︰اليوزر @{user_ab}\n</b>"
                                      f"<b>≭︰ايدي المجموعة {chat}\n</b>")
-    
+
+
+    online_button = InlineKeyboardButton(mname, url=f"https://t.me/{musrnam}")
     await query.message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @A1RTR .</b>")
+                             disable_web_page_preview=True,
+                             reply_markup=InlineKeyboardMarkup([[online_button]]))
 
 @app.on_message(
     command(["المطور"])
