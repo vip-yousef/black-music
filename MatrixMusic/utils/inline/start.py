@@ -44,7 +44,7 @@ def private_panel(_):
         [
              InlineKeyboardButton(
                 text=_["S_B_9"],
-                url=f"https://t.me/ExP_RsExS",
+                url=f"https://t.me/ExP_Black",
             ),
             InlineKeyboardButton(
                 text=_["S_B_6"],
