@@ -68,7 +68,8 @@ async def devatari(_, query: CallbackQuery):
                                      f"<b>≭︰بمناداتك عزيزي المطور\n</b>"
                                      f"<b>≭︰الأيدي {user_id}\n</b>"
                                      f"<b>≭︰اليوزر @{user_ab}\n</b>"
-                                     f"<b>≭︰ايدي المجموعة {chat}\n</b>")
+                                     f"<b>≭︰ايدي المجموعة {chat}\n</b>",
+                                     reply_markup=reply_markup)
 
 
     online_button = InlineKeyboardButton(mname, url=f"https://t.me/{musrnam}")
