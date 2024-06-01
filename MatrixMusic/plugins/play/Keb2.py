@@ -350,3 +350,33 @@ async def aTari(client: Client, message: Message):
             ]
     )
                                )
+
+@app.on_message(command(["‹ هامستر ›","هامستر"]) & filters.group)
+async def aTari(client: Client, message: Message):
+    rl = random.randint(2,3)
+    url = f"https://t.me/asoein/{rl}"
+    await client.send_animation(message.chat.id,url,caption="≭︰تم اختيار هامستر لك .",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text=config.CHANNEL_NAME, url=lnk)
+                ],
+            ]
+    )
+                               )
+
+@app.on_message(command(["‹ هامستر ›","هامستر"]) & filters.group)
+async def aTari(client: Client, message: Message):
+    rl = random.randint(4,5)
+    url = f"https://t.me/asoein/{rl}"
+    await client.send_voice(message.chat.id,url,caption="≭︰تم اختيار اغنية لك .",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text=config.CHANNEL_NAME, url=lnk)
+                ],
+            ]
+        )
+                           )
