@@ -15,11 +15,11 @@ from random import  choice, randint
 
 
 lnk= "" +config.SUPPORT_CHANNEL
-@app.on_message(command(["غنيلي","‹ غنيلي ›"]) & filters.private)
+@app.on_message(command(["غنيلي","‹ غنيلي ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/BE_19/{rl}"
-    await client.send_voice(message.chat.id,url,caption="↯︙تم اختيار اغنية لك .",
+    await client.send_voice(message.chat.id,url,caption="≭︰تم اختيار اغنية لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -32,11 +32,11 @@ async def aTari(client: Client, message: Message):
 
 
 
-@app.on_message(command(["‹ صور ›","صور"]) & filters.reply)
+@app.on_message(command(["‹ صور ›","صور"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,50)
     url = f"https://t.me/vnnkli/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار صورة لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار صورة لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -48,11 +48,11 @@ async def aTari(client: Client, message: Message):
     )
 
 
-@app.on_message(command(["‹ انمي ›", "انمي"]) & filters.private)
+@app.on_message(command(["‹ انمي ›", "انمي"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/LoreBots7/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار انمي لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار انمي لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -64,11 +64,11 @@ async def aTari(client: Client, message: Message):
     )
 
 
-@app.on_message(command(["‹ متحركة ›", "متحركة"]) & filters.private)
+@app.on_message(command(["‹ متحركة ›", "متحركة"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/GifWaTaN/{rl}"
-    await client.send_animation(message.chat.id,url,caption="↯︙تم اختيار المتحركة لك .",
+    await client.send_animation(message.chat.id,url,caption="≭︰تم اختيار المتحركة لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -79,11 +79,11 @@ async def aTari(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["‹ اقتباسات ›", "اقتباسات"]) & filters.private)
+@app.on_message(command(["‹ اقتباسات ›", "اقتباسات"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/LoreBots9/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار اقتباس لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار اقتباس لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -94,11 +94,11 @@ async def aTari(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["هيدرات", "‹ هيدرات ›"]) & filters.private)
+@app.on_message(command(["هيدرات", "‹ هيدرات ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/flflfldld/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار هيدرات لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار هيدرات لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -109,11 +109,11 @@ async def aTari(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["‹ افتارات شباب ›"]) & filters.private)
+@app.on_message(command(["‹ افتارات شباب ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/QrQsQ/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار صورة لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار صورة لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -124,11 +124,11 @@ async def aTari(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["‹ افتار بنات ›"]) & filters.private)
+@app.on_message(command(["‹ افتار بنات ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/vvyuol/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار صورة لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار صورة لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -140,11 +140,11 @@ async def aTari(client: Client, message: Message):
     )
 
 
-@app.on_message(command(["‹ قران ›", "قران"]) & filters.private)
+@app.on_message(command(["‹ قران ›", "قران"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(1,90)
     url = f"https://t.me/lllIIlIllIlIIlI/{rl}"
-    await client.send_voice(message.chat.id,url,caption="↯︙تم اختيار اية قرآنية لك .",
+    await client.send_voice(message.chat.id,url,caption="≭︰تم اختيار اية قرآنية لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -155,11 +155,11 @@ async def aTari(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["‹ جداريات ›"]) & filters.private)
+@app.on_message(command(["‹ جداريات ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,61)
     url = f"https://t.me/flflflgktl/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار جدارية لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار جدارية لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -170,11 +170,11 @@ async def aTari(client: Client, message: Message):
         )
                            )
 
-@app.on_message(command(["‹ لوكيت ›"]) & filters.private)
+@app.on_message(command(["‹ لوكيت ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(4,281)
     url = f"https://t.me/kabsjjwbs/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار لوكيت لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار لوكيت لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -185,11 +185,11 @@ async def aTari(client: Client, message: Message):
         )
                            )
 
-@app.on_message(command(["‹ افلام ›"]) & filters.private)
+@app.on_message(command(["‹ افلام ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,326)
     url = f"https://t.me/Ntsjcdz/{rl}"
-    await client.send_video(message.chat.id,url,caption="↯︙تم اختيار فلم لك .",
+    await client.send_video(message.chat.id,url,caption="≭︰تم اختيار فلم لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -201,11 +201,11 @@ async def aTari(client: Client, message: Message):
                            )
 
 
-@app.on_message(command(["‹ شعر ›"]) & filters.private)
+@app.on_message(command(["‹ شعر ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,30)
     url = f"https://t.me/lflfltnt/{rl}"
-    await client.send_voice(message.chat.id,url,caption="↯︙تم اختيار شعر لك .",
+    await client.send_voice(message.chat.id,url,caption="≭︰تم اختيار شعر لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -216,11 +216,11 @@ async def aTari(client: Client, message: Message):
         )
                            )
 
-@app.on_message(command(["‹ افتارات سينمائية ›"]) & filters.private)
+@app.on_message(command(["‹ افتارات سينمائية ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(3,218)
     url = f"https://t.me/IIYIZ/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار افتار سينمائي لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار افتار سينمائي لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -231,11 +231,11 @@ async def aTari(client: Client, message: Message):
         )
                            )
 
-@app.on_message(command(["‹ افتارات فنانين ›"]) & filters.private)
+@app.on_message(command(["‹ افتارات فنانين ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(3,214)
     url = f"https://t.me/FPPPH/{rl}"
-    await client.send_photo(message.chat.id,url,caption="↯︙تم اختيار افتار فنان لك .",
+    await client.send_photo(message.chat.id,url,caption="≭︰تم اختيار افتار فنان لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -246,11 +246,11 @@ async def aTari(client: Client, message: Message):
         )
                            )
 
-@app.on_message(command(["‹ قيفات شباب ›"]) & filters.private)
+@app.on_message(command(["‹ قيفات شباب ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,21)
     url = f"https://t.me/dldldldlgt/{rl}"
-    await client.send_animation(message.chat.id,url,caption="↯︙تم اختيار قيف شباب لك .",
+    await client.send_animation(message.chat.id,url,caption="≭︰تم اختيار قيف شباب لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -261,11 +261,11 @@ async def aTari(client: Client, message: Message):
         )
                            )
 
-@app.on_message(command(["‹ قيفات بنات ›"]) & filters.private)
+@app.on_message(command(["‹ قيفات بنات ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,22)
     url = f"https://t.me/lflflrofo/{rl}"
-    await client.send_animation(message.chat.id,url,caption="↯︙تم اختيار قيف بنات لك .",
+    await client.send_animation(message.chat.id,url,caption="≭︰تم اختيار قيف بنات لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -276,11 +276,11 @@ async def aTari(client: Client, message: Message):
         )
                                )
 
-@app.on_message(command(["‹ قيفات قطط ›"]) & filters.private)
+@app.on_message(command(["‹ قيفات قطط ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,101)
     url = f"https://t.me/gsgjituops/{rl}"
-    await client.send_animation(message.chat.id,url,caption="↯︙تم اختيار قيف قطط لك .",
+    await client.send_animation(message.chat.id,url,caption="≭︰تم اختيار قيف قطط لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -291,11 +291,11 @@ async def aTari(client: Client, message: Message):
         )
                                )
 
-@app.on_message(command(["‹ قيفات اطفال ›"]) & filters.private)
+@app.on_message(command(["‹ قيفات اطفال ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,24)
     url = f"https://t.me/fmgngoclr/{rl}"
-    await client.send_animation(message.chat.id,url,caption="↯︙تم اختيار قيف اطفال لك .",
+    await client.send_animation(message.chat.id,url,caption="≭︰تم اختيار قيف اطفال لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -306,11 +306,11 @@ async def aTari(client: Client, message: Message):
         )
                                )
 
-@app.on_message(command(["‹ قيفات رومانسية ›"]) & filters.private)
+@app.on_message(command(["‹ قيفات رومانسية ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,21)
     url = f"https://t.me/romansiaaa/{rl}"
-    await client.send_animation(message.chat.id,url,caption="↯︙تم اختيار قيف رومانسي لك .",
+    await client.send_animation(message.chat.id,url,caption="≭︰تم اختيار قيف رومانسي لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -321,11 +321,11 @@ async def aTari(client: Client, message: Message):
         )
                                )
 
-@app.on_message(command(["‹ قيفات كيبوب ›"]) & filters.private)
+@app.on_message(command(["‹ قيفات كيبوب ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,25)
     url = f"https://t.me/kibobg/{rl}"
-    await client.send_animation(message.chat.id,url,caption="↯︙تم اختيار قيف كيبوب لك .",
+    await client.send_animation(message.chat.id,url,caption="≭︰تم اختيار قيف كيبوب لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -336,11 +336,11 @@ async def aTari(client: Client, message: Message):
     )    
                                )
 
-@app.on_message(command(["‹ قيفات كوكسال ›"]) & filters.private)
+@app.on_message(command(["‹ قيفات كوكسال ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,59)
     url = f"https://t.me/koksalt/{rl}"
-    await client.send_animation(message.chat.id,url,caption="↯︙تم اختيار قيف كوكسال لك .",
+    await client.send_animation(message.chat.id,url,caption="≭︰تم اختيار قيف كوكسال لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
