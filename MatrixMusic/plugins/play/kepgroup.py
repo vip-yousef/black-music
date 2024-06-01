@@ -14,7 +14,7 @@ from pyrogram.types import (
 from MatrixMusic import app
 
 
-REPLY_MESSAGE = "<b>- اهلا بك عزيزي اليك قائمه الاوامر</b>"
+REPLY_MESSAGE = "<b>- اهلا بك عزيزي اليك قائمة اوامر التسلية</b>"
 
 
 
@@ -97,6 +97,7 @@ REPLY_MESSAGE_BUTTONS = [
             ("‹ قيفات كيبوب ›")
           ],
           [
+             ("‹ هامستر ›")
              ("‹ اخفاء الكيبورد ›")
 
           ]
