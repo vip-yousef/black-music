@@ -63,12 +63,12 @@ async def devatari(_, query: CallbackQuery):
     buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
     reply_markup = InlineKeyboardMarkup(buttons)
     
-    await app.send_message(OWNER_ID, f"<b>≭︰قام {query.from_user.mention}\n</b>"
-                                     f"<b>≭︰بمناداتك عزيزي المطور\n</b>"
-                                     f"<b>≭︰الأيدي {user_id}\n</b>"
-                                     f"<b>≭︰اليوزر @{user_ab}\n</b>"
-                                     f"<b>≭︰يوزر القروب @{chatusername}\n</b>"
-                                     f"<b>≭︰ايدي المجموعة {chat}\n</b>")
+    await app.send_message(OWNER_ID, f"<b>≭︰قام ~ ⦗ {query.from_user.mention} ⦘ .\n</b>"
+                                     f"<b>≭︰بمناداتك عزيزي المطور .\n</b>"
+                                     f"<b>≭︰الأيدي ~ ⦗ {user_id} ⦘ .\n</b>"
+                                     f"<b>≭︰اليوزر ~ ⦗ @{user_ab} ⦘ .\n</b>"
+                                     f"<b>≭︰يوزر المجموعة ~ ⦗ {chatusername} ⦘ .\n</b>"
+                                     f"<b>≭︰ايدي المجموعة ~ ⦗ {chat} ⦘ .\n</b>")
 
 
     await query.message.reply_text(f"<b>≭︰تم إرسال النداء إلى مطور البوت\n\n↯︙Dᥱꪜ - @A1RTR .</b>")
