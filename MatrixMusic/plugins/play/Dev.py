@@ -61,8 +61,6 @@ async def devatari(_, query: CallbackQuery):
     user_id = query.from_user.id
     user_ab = query.from_user.username
     user_name = query.from_user.first_name
-    buttons = [[InlineKeyboardButton(gti, url=f"{link}")]]
-    reply_markup = InlineKeyboardMarkup(buttons)
     
     await app.send_message(OWNER_ID, f"<b>≭︰قام ~ ⦗ {query.from_user.mention} ⦘ .\n</b>"
                                      f"<b>≭︰بمناداتك عزيزي المطور .\n</b>"
