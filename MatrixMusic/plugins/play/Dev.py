@@ -57,6 +57,7 @@ async def devatari(_, query: CallbackQuery):
     chat = query.message.chat.id
     gti = query.message.chat.title
     chatusername = f"@{query.message.chat.username}"
+    chatprivatename = f"@{query.message_chat_invite_link}"
     user_id = query.from_user.id
     user_ab = query.from_user.username
     user_name = query.from_user.first_name
@@ -67,7 +68,8 @@ async def devatari(_, query: CallbackQuery):
                                      f"<b>≭︰بمناداتك عزيزي المطور .\n</b>"
                                      f"<b>≭︰الأيدي ~ ⦗ {user_id} ⦘ .\n</b>"
                                      f"<b>≭︰اليوزر ~ ⦗ @{user_ab} ⦘ .\n</b>"
-                                     f"<b>≭︰يوزر المجموعة ~ ⦗ {chatusername} ⦘ .\n</b>"
+                                     f"<b>≭︰يوزر المجموعة العام ~ ⦗ {chatusername} ⦘ .\n</b>"
+                                     f"<b>≭︰يوزر المجموعة الخاص ~ ⦗ {chatprivatename} ⦘ .\n</b>"
                                      f"<b>≭︰ايدي المجموعة ~ ⦗ {chat} ⦘ .\n</b>")
 
 
