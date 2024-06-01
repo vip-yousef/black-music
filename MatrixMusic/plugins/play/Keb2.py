@@ -15,7 +15,7 @@ from random import  choice, randint
 
 
 lnk= "" +config.SUPPORT_CHANNEL
-@app.on_message(command(["غنيلي","‹ غنيلي ›"]) & filters.group & filters.reply)
+@app.on_message(command(["غنيلي","‹ غنيلي ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/BE_19/{rl}"
