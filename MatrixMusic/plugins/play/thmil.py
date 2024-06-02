@@ -2,7 +2,6 @@ import os
 import future
 import asyncio
 import requests
-import wget
 import time
 import yt_dlp
 from urllib.parse import urlparse
