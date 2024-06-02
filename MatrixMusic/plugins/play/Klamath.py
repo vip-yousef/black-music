@@ -182,7 +182,7 @@ async def game_handler(client: Client, message: Message):
     current_question = txt[current_question_index]
     correct_answer = correct_answers[current_question_index]
 
-    if message.text.lower() == correct_answer:
+    if message.text.lower() in correct_answer:
         await message.reply("إجابة صحيحة!")
         current_question_index += 1
 
@@ -192,5 +192,3 @@ async def game_handler(client: Client, message: Message):
             await message.reply("تم انتهاء الأسئلة. شكرًا للمشاركة.")
     else:
         await message.reply("إجابة خاطئة. حاول مرة أخرى.")
-
-# Additional code for starting the game or triggering the first question can be added as needed
