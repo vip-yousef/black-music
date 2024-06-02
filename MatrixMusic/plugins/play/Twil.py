@@ -26,3 +26,19 @@ async def huhh(client, message):
            ]
         )
     )
+
+@app.on_message(filters.command("تف", [".", ""]) & filters.group & filters.reply)
+async def huhh(client, message):
+    user = message.from_user
+    await message.reply_animation(
+        animation="https://telegra.ph/file/4a1f6a9bacb1a863f03f1.mp4",
+        caption=f"""≭︰تف ↫ ⦗ {message.from_user.mention} ⦘\n≭︰علي الضحيه دا 😢 ↫ ⦗ {message.reply_to_message.from_user.mention} ⦘\nاععع اي القرف دا""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+               [
+                   InlineKeyboardButton(
+                       "‹ 𝐁𝐥𝐚𝐜𝐤 𝐓𝐞𝐀𝐦 ›", url="https://t.me/vvizinn"),
+               ],
+           ]
+        )
+    )
