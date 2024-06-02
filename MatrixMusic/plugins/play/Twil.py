@@ -11,7 +11,7 @@ from pyrogram.types import (
     Message,
 )
 
-@app.on_message(command(["تخ"]) & filters.group)
+@app.on_message(filters.command(["تخ"]) & filters.group)
 async def huhh(client, message):
     user = message.from_user
     await message.reply_animation(
