@@ -19,7 +19,7 @@ lnk= "" +config.SUPPORT_CHANNEL
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/BE_19/{rl}"
-    await message.reply_voice(message.chat.id,url,caption="≭︰تم اختيار اغنية لك .",
+    await message.reply_voice(url,caption="≭︰تم اختيار اغنية لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -28,8 +28,7 @@ async def aTari(client: Client, message: Message):
                 ],
             ]
         )
-    )
-
+                             )
 
 
 @app.on_message(command(["‹ صور ›","صور"]) & filters.group)
