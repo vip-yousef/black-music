@@ -20,7 +20,7 @@ def reply_with_link(client, message):
             [InlineKeyboardButton("≭︰اضـغط هنا ↫ ⦗ لإرسال الهمسة السرية ⦘", url=start_link)]
         ]
     )
-    message.reply_text("\n≭︰اضـغط هنا ↫ ⦗ لإرسال الهمسة السرية ⦘\n", reply_markup=reply_markup)
+    message.reply_text("\nاضـغط هنا\n", reply_markup=reply_markup)
 
 waiting_for_black = False
 @app.on_message(filters.command("start"))
