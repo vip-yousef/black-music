@@ -95,4 +95,21 @@ async def rsexs(client, message):
                 ],
             ]
         ),
+                             )
+
+
+@app.on_message(command(["تخ"]) & filters.group)
+async def huhh(client, message):
+    await message.reply_animation(
+        animation=f"https://telegra.ph/file/5a18fe591860a8a98f39f.mp4",
+        caption=f"""≭︰قتل ↫ ⦗ {message.from_user.mention} ⦘\n≭︰الضحيه دا 😢 ↫ ⦗ [{user.first_name}](tg://user?id={user.id}) ⦘\nانا لله وانـا اليـه راجعـون 😢😢""",
     )
+    reply_markup=InlineKeyboardMarkup(
+
+       [
+           [
+               InlineKeyboardButton(
+                   "‹ 𝐁𝐥𝐚𝐜𝐤 𝐓𝐞𝐀𝐦 ›", url=f"https://t.me/vvizinn"),
+           ],
+       ]
+    ),
