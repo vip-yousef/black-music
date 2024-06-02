@@ -3,7 +3,6 @@ import random
 from pyrogram import filters, Client
 from pyrogram.types import Message
 from MatrixMusic import app
-from pyromod import listen
 import config
 
 
