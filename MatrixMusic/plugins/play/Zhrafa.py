@@ -91,9 +91,9 @@ async def style(c, m):
     cmd, style = m.data.split('+')
 
     if style == 'black':
-        cls = Fonts.typewriter
+        cls = Fonts.black
     if style == 'atari':
-        cls = Fonts.outline
+        cls = Fonts.atari
     if style == 'serif':
         cls = Fonts.serief
     if style == 'bold_cool':
@@ -172,6 +172,6 @@ async def style(c, m):
     r, oldtxt = m.message.reply_to_message.text.split(None, 1) 
     new_text = cls(oldtxt)            
     try:
-        await m.message.edit_text(f"`{new_text}`\n\n👆 اطغط للنسخ", reply_markup=m.message.reply_markup)
+        await m.message.edit_text(f"`{new_text}`\n\nاضـغـط هـنـا", reply_markup=m.message.reply_markup)
     except Exception as e:
         print(e)
