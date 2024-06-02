@@ -22,6 +22,8 @@ from MatrixMusic import app
 from pyrogram import Client, filters
 from config import OWNER_ID
 
+app = Client("my_account")
+
 def get_file_id(msg: Message):
     if msg.media:
         for message_type in (
@@ -98,10 +100,6 @@ async def rsexs(client, message):
                              )
 
 
-from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
-app = Client("my_account")
 
 @app.on_message(filters.command(["تخ"]) & filters.group)
 async def huhh(client, message):
