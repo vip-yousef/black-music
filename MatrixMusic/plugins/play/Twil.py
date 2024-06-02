@@ -21,6 +21,9 @@ async def huhh(client, message):
             [
                [
                    InlineKeyboardButton(
+                       "المجني عليه 😢", url=f"https://t.me/{message.reply_to_message.from_user.username}"
+                   ],[
+                   InlineKeyboardButton(
                        "‹ 𝐁𝐥𝐚𝐜𝐤 𝐓𝐞𝐀𝐦 ›", url="https://t.me/vvizinn"),
                ],
            ]
@@ -36,6 +39,9 @@ async def huhh(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                [
+                                     InlineKeyboardButton(
+                       "المجني عليه 😢", url=f"https://t.me/{message.reply_to_message.from_user.username}"
+                   ],[
                    InlineKeyboardButton(
                        "‹ 𝐁𝐥𝐚𝐜𝐤 𝐓𝐞𝐀𝐦 ›", url="https://t.me/vvizinn"),
                ],
