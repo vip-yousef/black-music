@@ -29,6 +29,7 @@ async def huhh(client, message):
            ]
         )
     )
+    
 
 @app.on_message(filters.command("تف", [".", ""]) & filters.group & filters.reply)
 async def huhh(client, message):
@@ -46,5 +47,6 @@ async def huhh(client, message):
                        "‹ 𝐁𝐥𝐚𝐜𝐤 𝐓𝐞𝐀𝐦 ›", url="https://t.me/vvizinn"),
                ],
            ]
+        ]
         )
     )
