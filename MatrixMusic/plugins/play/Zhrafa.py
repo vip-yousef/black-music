@@ -8,8 +8,8 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @app.on_message(filters.command("زخرفه",prefixes=""))
 async def style_buttons(c, m, cb=False):
     buttons = [[
-        InlineKeyboardButton('𝚃𝚢𝚙𝚎𝚠𝚛𝚒𝚝𝚎𝚛', callback_data='style+typewriter'),
-        InlineKeyboardButton('𝕆𝕦𝕥𝕝𝕚𝕟𝕖', callback_data='style+outline'),
+        InlineKeyboardButton('𝖻𝗅αᥴ𝗄', callback_data='style+black'),
+        InlineKeyboardButton('𝖺𝖳𝖺𝗋𝗂', callback_data='style+atari'),
         InlineKeyboardButton('𝐒𝐞𝐫𝐢𝐟', callback_data='style+serif'),
         ],[
         InlineKeyboardButton('𝑺𝒆𝒓𝒊𝒇', callback_data='style+bold_cool'),
@@ -36,7 +36,7 @@ async def style_buttons(c, m, cb=False):
         InlineKeyboardButton('H̆̈ă̈p̆̈p̆̈y̆̈', callback_data='style+happy'),
         InlineKeyboardButton('S̑̈ȃ̈d̑̈', callback_data='style+sad'),
         ],[
-        InlineKeyboardButton('Next ➡️', callback_data="nxt")
+        InlineKeyboardButton('‹ رجوع ›', callback_data="nxt")
     ]]
     if not cb:
         if ' ' in m.text:
@@ -77,7 +77,7 @@ async def nxt(c, m):
             InlineKeyboardButton('S̶t̶r̶i̶k̶e̶', callback_data='style+strike'),
             InlineKeyboardButton('F༙r༙o༙z༙e༙n༙', callback_data='style+frozen')
             ],[
-            InlineKeyboardButton('⬅️ Back', callback_data='nxt+0')
+            InlineKeyboardButton('‹ رجوع ›', callback_data='nxt+0')
         ]]
         await m.answer()
         await m.message.edit_reply_markup(InlineKeyboardMarkup(buttons))
@@ -90,9 +90,9 @@ async def style(c, m):
     await m.answer()
     cmd, style = m.data.split('+')
 
-    if style == 'typewriter':
+    if style == 'black':
         cls = Fonts.typewriter
-    if style == 'outline':
+    if style == 'atari':
         cls = Fonts.outline
     if style == 'serif':
         cls = Fonts.serief
