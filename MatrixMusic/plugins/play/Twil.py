@@ -11,12 +11,12 @@ from pyrogram.types import (
     Message,
 )
 
-@app.on_message(filters.command(["تخ"]) & filters.group)
+@app.on_message(filters.command("تخ", [".", ""]) & filters.group)
 async def huhh(client, message):
     user = message.from_user
     await message.reply_animation(
         animation="https://telegra.ph/file/5a18fe591860a8a98f39f.mp4",
-        caption=f"""≭︰قتل ↫ ⦗ {message.from_user.mention} ⦘\n≭︰الضحيه دا 😢 ↫ ⦗ [{user.first_name}](tg://user?id={user.id}) ⦘\nانا لله وانـا اليـه راجعـون 😢😢""",
+        caption=f"""≭︰قتل ↫ ⦗ {message.from_user.mention} ⦘\n≭︰الضحيه دا 😢 ↫ ⦗ {message.reply_to_message.from_user.mention} ⦘\nانا لله وانـا اليـه راجعـون 😢😢""",
         reply_markup=InlineKeyboardMarkup(
             [
                [
