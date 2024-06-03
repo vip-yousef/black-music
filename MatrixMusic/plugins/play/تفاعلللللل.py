@@ -253,7 +253,7 @@ VC_TAG = [ "@ل1 تشتريلي هدوم ونفطر سوا ؟",
 
 
 
-@app.on_message(filters.command(["تاك تفاعل"], prefixes=["", "@", "#"]))
+@app.on_message(filters.command(["تفاعل"], prefixes=["", "@", "#"]))
 async def mention_allvc(client, message):
     chat_id = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
@@ -298,7 +298,7 @@ async def mention_allvc(client, message):
 
 
 
-@app.on_message(filters.command(["تاك بس"], prefixes=["", "@", "#"]))
+@app.on_message(filters.command(["تاك"], prefixes=["", "@", "#"]))
 async def cancel_spam(client, message):
     if not message.chat.id in spam_chats:
         return await message.reply("๏ ᴄᴜʀʀᴇɴᴛʟʏ ɪ'ᴍ ɴᴏᴛ ᴛᴀɢɢɪɴɢ ʙᴀʙʏ.")
