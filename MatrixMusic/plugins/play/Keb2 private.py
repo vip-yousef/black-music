@@ -245,7 +245,7 @@ async def aTari(client: Client, message: Message):
         )
                            )
 
-@app.on_message(command(["‹ فيديو ›","فيديو") & filters.private)
+@app.on_message(command(["‹ فيديو ›","فيديو"]) & filters.private)
 async def aTari(client: Client, message: Message):
     rl = random.randint(1,78)
     url = f"https://t.me/LKKKKT/{rl}"
