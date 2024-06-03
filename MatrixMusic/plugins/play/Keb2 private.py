@@ -264,7 +264,7 @@ async def aTari(client: Client, message: Message):
 async def aTari(client: Client, message: Message):
     rl = random.randint(1,379)
     url = f"https://t.me/storryr/{rl}"
-    await await massage.reply_video(url,caption="≭︰تم اختيار ستوري لك .",
+    await massage.reply_video(url,caption="≭︰تم اختيار ستوري لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
