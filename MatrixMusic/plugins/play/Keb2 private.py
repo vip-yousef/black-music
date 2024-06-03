@@ -234,7 +234,7 @@ async def aTari(client: Client, message: Message):
 async def aTari(client: Client, message: Message):
     rl = random.randint(2,326)
     url = f"https://t.me/Ntsjcdz/{rl}"
-    await massage.reply_video(url,caption="≭︰تم اختيار فلم لك .",
+    await message.reply_video(url,caption="≭︰تم اختيار فلم لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -249,7 +249,7 @@ async def aTari(client: Client, message: Message):
 async def aTari(client: Client, message: Message):
     rl = random.randint(1,78)
     url = f"https://t.me/LKKKKT/{rl}"
-    await massage.reply_video(url,caption="≭︰تم اختيار فيديو التمبلر لك .",
+    await message.reply_video(url,caption="≭︰تم اختيار فيديو التمبلر لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -264,7 +264,7 @@ async def aTari(client: Client, message: Message):
 async def aTari(client: Client, message: Message):
     rl = random.randint(1,379)
     url = f"https://t.me/storryr/{rl}"
-    await massage.reply_video(url,caption="≭︰تم اختيار ستوري لك .",
+    await message.reply_video(url,caption="≭︰تم اختيار ستوري لك .",
     reply_markup=InlineKeyboardMarkup(
             [
                 [
