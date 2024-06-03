@@ -6,11 +6,10 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-italy = ["ممكن تسميني باسمي!", "اسمي القميل ماتركس", "شوي واجيك", "عنديہ آسم ترۿ", "ياروحه اسمـي ماتركس 🧸♥️؟!"]
+atari = ["وبعدين وياك ؟", "عندي اسم ترا", "زعلت !", "وياك القميل بلاك"]
 
 @app.on_message(filters.text & filters.regex(r"(^|\W)بوت(\W|$)"))
-async def Italymusic(client, message):
+async def atari(client, message):
     if "بوت" in message.text:
-        response = random.choice(italy)
-        keyboard = InlineKeyboardMarkup([[InlineKeyboardButton("قناة السورس", url="https://t.me/vvizinn")]])
-        await message.reply(response, reply_markup=keyboard)
+        response = random.choice(atari)
+        await message.reply(response)
