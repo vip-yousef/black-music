@@ -15,7 +15,7 @@ from pyrogram.types import (
 async def huhh(client, message):
     user = message.from_user
     await message.reply_animation(
-        animation="https://telegra.ph/file/c924bb3f5c443c9f157a8.mp4",
+        animation="https://telegra.ph/file/b90d4b29a715fb542544a.mp4",
         caption=f"""≭︰قتل ↫ ⦗ {message.from_user.mention} ⦘\n≭︰الضحيه دا 😢 ↫ ⦗ {message.reply_to_message.from_user.mention} ⦘\nانا لله وانـا اليـه راجعـون 😢😢""",
         reply_markup=InlineKeyboardMarkup(
             [
