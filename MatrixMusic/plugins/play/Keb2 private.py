@@ -260,7 +260,7 @@ async def aTari(client: Client, message: Message):
         )
                            )
 
-@app.on_message(command(["‹ ستوري ›","ستوري") & filters.private)
+@app.on_message(command(["‹ ستوري ›","ستوري")] & filters.private)
 async def aTari(client: Client, message: Message):
     rl = random.randint(1,379)
     url = f"https://t.me/storryr/{rl}"
