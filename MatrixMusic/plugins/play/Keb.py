@@ -14,7 +14,7 @@ from pyrogram.types import (
 from MatrixMusic import app
 
 
-REPLY_MESSAGE = "<b>- اهلا بك عزيزي اليك قائمه الاوامر</b>"
+REPLY_MESSAGE = "<b>- اهلا بك عزيزي اليك قائمة اوامر التسلية .\n- اصدار السورس ~ 5.8V .\n- اصدار الكيبورد ~ 5.8V .</b>"
 
 
 
@@ -97,6 +97,17 @@ REPLY_MESSAGE_BUTTONS = [
             ("‹ قيفات كيبوب ›")
           ],
           [
+             ("‹ ستوري ›"),
+
+             ("‹ راب ›")
+          ],
+          [
+             ("‹ فيديو ›"),
+
+             ("‹ ريمكس ›")
+          ],
+          [
+             ("‹ فويز ›"),
              ("‹ اخفاء الكيبورد ›")
 
           ]
@@ -108,7 +119,7 @@ REPLY_MESSAGE_BUTTONS = [
 
   
 
-@app.on_message(filters.regex("^/cmds$") & filters.private)
+@app.on_message(filters.regex("^/cmds@ATARI2DBOT$") & filters.group)
 async def cpanel(_, message: Message):             
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True, selective=True)
@@ -117,6 +128,6 @@ async def cpanel(_, message: Message):
               reply_markup=reply_markup
         )
 
-@app.on_message(filters.regex("‹ اخفاء الكيبورد ›") & filters.private)
+@app.on_message(filters.regex("‹ اخفاء الكيبورد ›") & filters.group)
 async def down(client, message):
           m = await message.reply("<b>- تم اغلاق الكيبورد.</b>", reply_markup= ReplyKeyboardRemove(selective=True))
