@@ -17,8 +17,8 @@ from random import  choice, randint
 lnk= "" +config.SUPPORT_CHANNEL
 @app.on_message(command(["غنيلي","‹ غنيلي ›"]) & filters.group)
 async def aTari(client: Client, message: Message):
-    rl = random.randint(2,90)
-    url = f"https://t.me/BE_19/{rl}"
+    rl = random.randint(2,2301)
+    url = f"https://t.me/AudiosWaTaN/{rl}"
     await message.reply_voice(url,caption="≭︰تم اختيار اغنية لك .",
     reply_markup=InlineKeyboardMarkup(
             [
@@ -30,11 +30,57 @@ async def aTari(client: Client, message: Message):
         )
                              )
 
+@app.on_message(command(["فويز","‹ فويز ›"]) & filters.group)
+async def aTari(client: Client, message: Message):
+    rl = random.randint(2,580)
+    url = f"https://t.me/AudiosWaTaN/{rl}"
+    await message.reply_voice(url,caption="≭︰تم اختيار فويز لك .",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text=config.CHANNEL_NAME, url=lnk)
+                ],
+            ]
+        )
+                             )
+
+@app.on_message(command(["ريمكس","‹ ريمكس ›"]) & filters.group)
+async def aTari(client: Client, message: Message):
+    rl = random.randint(2,279)
+    url = f"https://t.me/remixsource/{rl}"
+    await message.reply_voice(url,caption="≭︰تم اختيار ريمكس لك .",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text=config.CHANNEL_NAME, url=lnk)
+                ],
+            ]
+        )
+                             )
+
+@app.on_message(command(["راب","‹ راب ›"]) & filters.group)
+async def aTari(client: Client, message: Message):
+    rl = random.randint(2,86)
+    url = f"https://t.me/RapEthan/{rl}"
+    await message.reply_voice(url,caption="≭︰تم اختيار الراب لك .",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text=config.CHANNEL_NAME, url=lnk)
+                ],
+            ]
+        )
+                             )
+
+
 
 @app.on_message(command(["‹ صور ›","صور"]) & filters.group)
 async def aTari(client: Client, message: Message):
-    rl = random.randint(2,50)
-    url = f"https://t.me/vnnkli/{rl}"
+    rl = random.randint(1,107)
+    url = f"https://t.me/LKKKKV/{rl}"
     await message.reply_photo(url,caption="≭︰تم اختيار صورة لك .",
     reply_markup=InlineKeyboardMarkup(
             [
@@ -49,8 +95,8 @@ async def aTari(client: Client, message: Message):
 
 @app.on_message(command(["‹ انمي ›", "انمي"]) & filters.group)
 async def aTari(client: Client, message: Message):
-    rl = random.randint(2,90)
-    url = f"https://t.me/LoreBots7/{rl}"
+    rl = random.randint(2,999)
+    url = f"https://t.me/AnimeWaTaN/{rl}"
     await message.reply_photo(url,caption="≭︰تم اختيار انمي لك .",
     reply_markup=InlineKeyboardMarkup(
             [
@@ -65,7 +111,7 @@ async def aTari(client: Client, message: Message):
 
 @app.on_message(command(["‹ متحركة ›", "متحركة"]) & filters.group)
 async def aTari(client: Client, message: Message):
-    rl = random.randint(2,90)
+    rl = random.randint(2,925)
     url = f"https://t.me/GifWaTaN/{rl}"
     await message.reply_animation(url,caption="≭︰تم اختيار المتحركة لك .",
     reply_markup=InlineKeyboardMarkup(
@@ -199,11 +245,41 @@ async def aTari(client: Client, message: Message):
         )
                            )
 
+@app.on_message(command(["‹ فيديو ›","فيديو") & filters.group)
+async def aTari(client: Client, message: Message):
+    rl = random.randint(1,78)
+    url = f"https://t.me/LKKKKT/{rl}"
+    await client.send_video(message.chat.id,url,caption="≭︰تم اختيار فيديو التمبلر لك .",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text=config.CHANNEL_NAME, url=lnk)
+                ],
+            ]
+        )
+                           )
+
+@app.on_message(command(["‹ ستوري ›","ستوري") & filters.group)
+async def aTari(client: Client, message: Message):
+    rl = random.randint(1,379)
+    url = f"https://t.me/storryr/{rl}"
+    await client.send_video(message.chat.id,url,caption="≭︰تم اختيار ستوري لك .",
+    reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        text=config.CHANNEL_NAME, url=lnk)
+                ],
+            ]
+        )
+                           )
+    
 
 @app.on_message(command(["‹ شعر ›","شعر"]) & filters.group)
 async def aTari(client: Client, message: Message):
-    rl = random.randint(2,30)
-    url = f"https://t.me/lflfltnt/{rl}"
+    rl = random.randint(7,622)
+    url = f"https://t.me/L1BBBL/{rl}"
     await message.reply_voice(url,caption="≭︰تم اختيار شعر لك .",
     reply_markup=InlineKeyboardMarkup(
             [
