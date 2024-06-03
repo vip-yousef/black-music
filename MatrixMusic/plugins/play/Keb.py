@@ -119,7 +119,7 @@ REPLY_MESSAGE_BUTTONS = [
 
   
 
-@app.on_message(filters.regex("^/cmds@ATARI2DBOT$") & filters.group)
+@app.on_message(filters.regex("^/cmds$") & filters.group)
 async def cpanel(_, message: Message):             
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True, selective=True)
