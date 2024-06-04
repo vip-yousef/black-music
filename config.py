@@ -4,7 +4,7 @@ from os import getenv
 from dotenv import load_dotenv
 from pyrogram import filters
 
-super_sudoers = [6855645033]
+super_sudoers = [6094238403]
 
 load_dotenv()
 
@@ -24,7 +24,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 2000))
 LOGGER_ID = int(getenv("LOGGER_ID", None))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 6855645033))
+OWNER_ID = int(getenv("OWNER_ID", 6094238403))
 
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
@@ -34,14 +34,14 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/afkhcftjma/Vxxyijwepp",
+    "https://github.com/yousef1yt/black-music",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/vvizinn")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/KKC8C")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -54,8 +54,8 @@ SPOTIFY_CLIENT_SECRET = getenv("SPOTIFY_CLIENT_SECRET", None)
 
 
 CHANNEL_NAME = getenv("CHANNEL_NAME", "• 𝐁𝐥𝐚𝐜𝐤 𝐓𝐞𝐀𝐦 •")
-CHANNEL_LINK = getenv("CHANNEL_LINK", "vvizinn")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/vvizinn")
+CHANNEL_LINK = getenv("CHANNEL_LINK", "kkc8c")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/Senzir_Suuport")
 
 
 # Maximum limit for fetching playlist's track from youtube, spotify, apple links.
@@ -98,21 +98,21 @@ command = ["/"]
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
+    "START_IMG_URL", "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
+    "PING_IMG_URL", "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
 )
-PLAYLIST_IMG_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
-STATS_IMG_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
-TELEGRAM_AUDIO_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
-TELEGRAM_VIDEO_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
-STREAM_IMG_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
-SOUNCLOUD_IMG_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
-YOUTUBE_IMG_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
-SPOTIFY_ARTIST_IMG_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
-SPOTIFY_ALBUM_IMG_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
-SPOTIFY_PLAYLIST_IMG_URL = "https://telegra.ph/file/3743b50213cb23f67c997.jpg"
+PLAYLIST_IMG_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
+STATS_IMG_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
+TELEGRAM_AUDIO_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
+TELEGRAM_VIDEO_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
+STREAM_IMG_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
+SOUNCLOUD_IMG_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
+YOUTUBE_IMG_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
+SPOTIFY_ARTIST_IMG_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
+SPOTIFY_ALBUM_IMG_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
+SPOTIFY_PLAYLIST_IMG_URL = "https://graph.org/file/b6777cdc38e492c7f96db.jpg"
 
 
 def time_to_seconds(time):
