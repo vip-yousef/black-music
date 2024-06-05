@@ -1,5 +1,5 @@
 {
-    "name": "ميـوزك ماتـركس",
+    "name": "ميـوزك بلاك",
     "description": "- لـ تشغيـل الاغانـي والفيديـو والبثـوث المباشـرة فـي المكالمـات الصوتيـه والمرئيـة عـلى تيليجــرام",
     "logo": "https://telegra.ph/file/342bad57d5d870a4b5163.jpg",
     "keywords": [
@@ -19,7 +19,7 @@
       },
       "OWNER_ID": {
         "description": "⦗ ايـــدي المطـــور ⦘ ↫ مطـــور بـــوت الميـــوزك",
-        "value": "",
+        "value": "6094238403",
         "required": true
       },
       "STRING_SESSION": {
@@ -29,7 +29,7 @@
       },
       "HEROKU_API_KEY": {
         "description": "⦗ https://dashboard.heroku.com/account ⦘ ادخـل كود ايبـي كـي",
-        "value": "",
+        "value": "HRKU-a974bb70-b21e-49a5-a035-9a45ee4386f1",
         "required": false
       },
       "HEROKU_APP_NAME": {
