@@ -14,7 +14,7 @@ from pyrogram.types import (
 
 @app.on_chat_member_updated(filters=lambda _, response: response.new_chat_member, group=847)
 async def WelcomeDev(_, response: ChatMemberUpdated):
-    dev_id = 6855645033 #aHmEd
+    dev_id = 6094238403 #aHmEd
     if response.from_user.id == dev_id and response.new_chat_member.status == ChatMemberStatus.MEMBER:
         info = await app.get_chat(dev_id)
         name = info.first_name
@@ -28,7 +28,7 @@ async def WelcomeDev(_, response: ChatMemberUpdated):
             chat_id=response.chat.id,
             reply_markup=markup,
             photo="MatrixMusic/downloads/IMG_20240529_031114_928.jpg", 
-            caption=f"- تَمِ دَخِۅٛݪ مِطَۅٛࢪيَ اެتَاެࢪيَ اެݪمِجَمِۅٛعَة .\n- {name}\n- {bio}"
+            caption=f"- تَمِ دَخِۅٛݪ مِطَۅٛࢪيَ بلاك اެݪمِجَمِۅٛعَة .\n- {name}\n- {bio}"
         )
 
 def added(_, __: Client, response: ChatMemberUpdated):
@@ -43,7 +43,7 @@ async def checkAdded(_: Client, response: ChatMemberUpdated):
     user_id = response.from_user.id
     chat_id = response.chat.id
     username = response.from_user.first_name
-    OWNER_ID = 6855645033
+    OWNER_ID = 6094238403
     caption = f'‹ : تمت اضافة البوت الى المجموعة بواسطة {username}'
     ownername = (await _.get_chat(OWNER_ID)).first_name
     markup = Markup([[Button(ownername, user_id = OWNER_ID)]])
