@@ -17,4 +17,4 @@ def dirr():
     if "cache" not in os.listdir():
         os.mkdir("cache")
 
-    LOGGER("ميــوزك ماتـركس").info("تم تحـديث السـورس ...✓")
+    LOGGER("ميــوزك بلاك").info("تم تحـديث السـورس ...✓")
