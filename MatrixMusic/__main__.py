@@ -42,18 +42,18 @@ async def init():
     try:
         await Zelzaly.stream_call("https://telegra.ph/file/29f784eb49d230ab62e9e.mp4")
     except NoActiveGroupCall:
-        LOGGER("ميــوزك ماتـركس").info(
+        LOGGER("ميــوزك بلاك").info(
             "خطأ .. قم بفتح المكالمة في مجموعة السجل الخاصه بك\n\nجارِ ايقاف بوت الميوزك . . ."
         )
         exit()
     except:
         pass
     await Zelzaly.decorators()
-    LOGGER("ميــوزك ماتـركس").info("MatrixThon")
+    LOGGER("ميــوزك بلاك").info("MatrixThon")
     await idle()
     await app.stop()
     await userbot.stop()
-    LOGGER("ميــوزك ماتـركس").info("جارِ ايقاف بوت الميوزك . . .")
+    LOGGER("ميــوزك بلاك").info("جارِ ايقاف بوت الميوزك . . .")
 
 
 if __name__ == "__main__":
