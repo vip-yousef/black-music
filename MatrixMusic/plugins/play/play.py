@@ -22,8 +22,8 @@ from MatrixMusic.utils.inline import (
     slider_markup,
     track_markup,
 )
-from ZelzalMusic.utils.logger import play_logs
-from ZelzalMusic.utils.stream.stream import stream
+from MatrixMusic.utils.logger import play_logs
+from MatrixMusic.utils.stream.stream import stream
 from config import BANNED_USERS, lyrical
 
 force_btn = InlineKeyboardMarkup(
