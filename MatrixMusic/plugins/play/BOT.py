@@ -38,7 +38,7 @@ caesar_responses = [
     "شكلها منكدا عليك وجاي تطلعهم علينا 😂♥ ,",
 ]
 
-@app.on_message(filters.command(["بوت", "بلاك"], ""), group=71135)
+@app.on_message(filters.command(["بوت", "لينو"], ""), group=71135)
 async def caesar_bot(client, message):
     global name
     bot_username = (await app.get_me()).username
